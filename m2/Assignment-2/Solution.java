@@ -1,8 +1,8 @@
-/*
+/**
     * Do not modify this main function.
 */
 import java.util.Scanner;
-/*
+/**
     * Do not modify this main function.
 */
 final class Solution {
