@@ -17,8 +17,8 @@ public class Solution {
 	static void rootsOfQuadraticEquation(int a, int b, int c) {
 		int k = 4;
 		int t = 2;
-		double x = (-b+Math.sqrt(b * b - k * a * c)) / (t * a);
-		double y = (-b-Math.sqrt((b * b) - (k * a * c))) / (t * a);
+		double x = (- b + Math.sqrt(b * b - k * a * c)) / (t * a);
+		double y = (- b - Math.sqrt((b * b) - (k * a * c))) / (t * a);
 		System.out.println(x + " " + y);	
 	}
 }
