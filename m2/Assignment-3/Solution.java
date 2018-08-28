@@ -38,3 +38,4 @@ public class Solution {
         return a * power(a, b - 1);
     }
 }
+
