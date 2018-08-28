@@ -1,6 +1,9 @@
+/*
+    * Do not modify this main function.
+*/
 import java.util.Scanner;
 /*
-Do not modify this main function.
+    * Do not modify this main function.
 */
 final class Solution {
 /**
@@ -26,7 +29,8 @@ final class Solution {
     *@param b argument
     *@param c argument
 */
-    static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
+    static void rootsOfQuadraticEquation(final int a,
+     final int b, final int c) {
         int k = 2 + 2;
         int t = 2;
         double x = (-b + Math.sqrt(b * b - k * a * c)) / (t * a);
