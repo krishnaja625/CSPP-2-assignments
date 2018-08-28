@@ -14,7 +14,7 @@ final class Solution {
 		rootsOfQuadraticEquation(a, b, c);
 	}
 	/*
-	Need to write the rootsOfQuadraticEquation 
+	Need.
 		*/
 	static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
 		int k = 2 + 2;
