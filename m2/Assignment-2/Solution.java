@@ -9,6 +9,7 @@ final class Solution {
     protected Solution() { }
 /**
 *Do not modify this main function.
+*@param args are command line arguments.
 */
     public static void main(final String[] args) {
 /**
