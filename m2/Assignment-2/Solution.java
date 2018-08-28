@@ -24,13 +24,13 @@ final class Solution {
         int c = scan.nextInt();
         rootsOfQuadraticEquation(a, b, c);
     }
-/**
- * { function_description }
- *
- * @param      a     { parameter_description }
- * @param      b     { parameter_description }
- * @param      c     { parameter_description }
- */
+    /**
+     * { function_description }
+     *
+     * @param      a     { parameter_description }
+     * @param      b     { parameter_description }
+     * @param      c     { parameter_description }
+     */
     static void rootsOfQuadraticEquation(final int a,
      final int b, final int c) {
         int k = 2 + 2;
