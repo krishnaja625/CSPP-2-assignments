@@ -22,8 +22,10 @@ final class Solution {
         rootsOfQuadraticEquation(a, b, c);
     }
 /**
-*Need.
-    */
+    *@param a argument
+    *@param b argument
+    *@param c argument
+*/
     static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
         int k = 2 + 2;
         int t = 2;
