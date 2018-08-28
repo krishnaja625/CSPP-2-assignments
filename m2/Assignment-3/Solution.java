@@ -5,11 +5,17 @@ import java.util.Scanner;
 
 public class Solution {
     /**
-     * { item_description }
+    new class.
+     */
+    protected Solution() { }
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
      */
     public static void main(String[] args) {
         /**
-         * { var_description }
+         * { var_description }.
          */
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
@@ -18,7 +24,7 @@ public class Solution {
         System.out.println(result);
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      a     { parameter_description }
      * @param      b     { parameter_description }
