@@ -6,6 +6,10 @@ final class Solution {
 	/*
 	Do not modify this main function.
 	*/
+    protected Solution() { }
+    /*
+    Do not modify this main function.
+    */
 	public static void main(final String[] args) {
 		/*
 		Do not modify this main function.
