@@ -6,7 +6,10 @@ final class Solution {
 	/*
 	Do not modify this main function.
 	*/
-	public static void main(final String[] args) {
+	private static void main(final String[] args) {
+		/*
+		Do not modify this main function.
+		*/
 		Scanner scan = new Scanner(System.in);
 		int a = scan.nextInt();
 		int b = scan.nextInt();
@@ -15,7 +18,7 @@ final class Solution {
 	}
 	/*
 	Need.
-		*/
+	*/
 	static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
 		int k = 2 + 2;
 		int t = 2;
