@@ -15,8 +15,10 @@ public class Solution {
 	Need to write the rootsOfQuadraticEquation function and print the output.
 	*/
 	static void rootsOfQuadraticEquation(int a, int b, int c) {
-		double x = (-b+Math.sqrt(b*b-4*a*c))/(2*a);
-		double y = (-b-Math.sqrt((b*b)-(4*a*c)))/(2*a);
-		System.out.println(x+" "+y);	
+		int k = 4;
+		int t = 2;
+		double x = (-b+Math.sqrt(b * b-k * a * c))/(t * a);
+		double y = (-b-Math.sqrt((b * b)-(k * a * c)))/(t * a);
+		System.out.println(x + " " + y);	
 	}
 }
