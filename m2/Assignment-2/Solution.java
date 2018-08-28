@@ -2,11 +2,11 @@ import java.util.Scanner;
 /*
 Do not modify this main function.
 */
-public class Solution {
+final class Solution {
 	/*
 	Do not modify this main function.
 	*/
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int a = scan.nextInt();
 		int b = scan.nextInt();
