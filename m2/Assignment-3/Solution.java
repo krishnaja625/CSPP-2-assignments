@@ -13,7 +13,7 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         /**
          * { var_description }.
          */
@@ -32,8 +32,7 @@ public class Solution {
      * @return     { description_of_the_return_value }
      */
     static long power(final int a, final int b) {
-        if (b == 0)
-        {
+        if (b == 0) {
             return 1;
         }
         return a * power(a, b - 1);
