@@ -14,13 +14,13 @@ public class Solution {
 		rootsOfQuadraticEquation(a, b, c);
 	}
 	/*
-	Need to write the rootsOfQuadraticEquation function and print the output.
-	*/
-	static void rootsOfQuadraticEquation(int a, int b, int c) {
+	Need to write the rootsOfQuadraticEquation 
+		*/
+	static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
 		int k = 2 + 2;
 		int t = 2;
 		double x = (-b + Math.sqrt(b * b - k * a * c)) / (t * a);
 		double y = (-b - Math.sqrt((b * b) - (k * a * c))) / (t * a);
-		System.out.println(x + " " + y);	
+		System.out.println(x + " " + y);
 	}
 }
