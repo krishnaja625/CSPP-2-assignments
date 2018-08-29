@@ -21,9 +21,7 @@ final class Solution {
         Scanner s=new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();
-        int gcd = 0;
-        gcd(n1,n2);
-        System.out.println(gcd);
+        System.out.println(gcd(n1, n2));
     }
     /*
 	Need to write the gcd function and print the output.
