@@ -27,7 +27,7 @@ final class Solution {
 	Need to write the gcd function and print the output.
 	*/
     static int gcd(int n1, int n2) {
-        int i = 1, j =0;
+        int i = 1, j =1;
         int num = 0;
         int g = 0;
         if (n1 > n2) {
@@ -43,7 +43,7 @@ final class Solution {
                 j = j + 1;
             }
         }
-        if (j == 1) {
+        if (j == 2) {
             return 1;
         }
         return a[j - 1];
