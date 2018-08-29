@@ -44,7 +44,8 @@ final class Solution {
         else {
             num = n1;
         }
-        int a[] = new int[num];
+        int[] a;
+        a = new int[num];
         for (i = 1; i <= num; i++) {
             if (n1 % i == 0 && n2 % i == 0) {
                 a[j] = i;
