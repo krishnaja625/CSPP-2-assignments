@@ -13,8 +13,10 @@ final class Solution {
  *
  * @param      args  The arguments
  */
-
     public static void main(final String[] args) {
+        /**
+         * { var_description }.
+         */
         Scanner s = new Scanner(System.in);      
         int n = s.nextInt();
         int i = 0;
@@ -35,3 +37,4 @@ final class Solution {
         System.out.println(count);
     }
 }
+
