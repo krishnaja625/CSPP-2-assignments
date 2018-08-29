@@ -19,7 +19,7 @@ final class Solution {
         /**
          * { var_description }.
          */
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int i = 0;
         int count = 0;
@@ -39,4 +39,5 @@ final class Solution {
         System.out.println(count);
     }
 }
+
 
