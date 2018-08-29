@@ -29,7 +29,7 @@ final class Solution {
     static int gcd(int n1, int n2) {
         int i = 1, j =1;
         int num = 0;
-        int gcd = 0;
+        int g = 0;
         if (n1 > n2) {
             num = n2;
         }
@@ -44,8 +44,8 @@ final class Solution {
             }
         }
         for (i = 1; i < j; i++) {
-            gcd = a[j] * gcd;
+            g = a[j] * g;
         }
-        return gcd;
+        return g;
     }
 }
