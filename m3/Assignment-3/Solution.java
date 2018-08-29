@@ -43,9 +43,6 @@ final class Solution {
                 j = j + 1;
             }
         }
-        for (i = 1; i < j; i++) {
-            g = a[j] * g;
-        }
-        return g;
+        return a[j - 1];
     }
 }
