@@ -44,7 +44,7 @@ final class Solution {
             }
         }
         if (j == 1) {
-            return a[j];
+            return 1;
         }
         return a[j - 1];
     }
