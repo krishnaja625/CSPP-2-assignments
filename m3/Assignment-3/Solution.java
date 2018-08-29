@@ -43,6 +43,9 @@ final class Solution {
                 j = j + 1;
             }
         }
+        if (j == 1) {
+            return a[j];
+        }
         return a[j - 1];
     }
 }
