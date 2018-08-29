@@ -36,13 +36,10 @@ final class Solution {
          * { var_description }
          */
         int i = 1, j = 0;
-        int num = 0;
+        int num = n2;
         int g = 0;
         if (n1 > n2) {
             num = n2;
-        }
-        else {
-            num = n1;
         }
         int[] a;
         a = new int[num];
