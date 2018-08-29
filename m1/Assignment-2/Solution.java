@@ -16,7 +16,6 @@ public class Solution {
 	*/
 	static void areaOfTriangle(int base,int height){
 		float area = (base*height)/2;
-		System.out.println(area);
-	
+		System.out.println(area);	
 }
 }
