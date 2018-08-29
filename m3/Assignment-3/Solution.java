@@ -43,7 +43,7 @@ final class Solution {
                 j = j + 1;
             }
         }
-        if (j == 1) {
+        if (j == 2) {
             return 1;
         }
         return a[j - 1];
