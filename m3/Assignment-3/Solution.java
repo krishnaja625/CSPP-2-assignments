@@ -18,16 +18,24 @@ final class Solution {
         /**
          * { var_description }.
          */
-        Scanner s=new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();
         System.out.println(gcd(n1, n2));
     }
-    /*
-	Need to write the gcd function and print the output.
-	*/
-    static int gcd(int n1, int n2) {
-        int i = 1, j =1;
+    /**
+     * Need to write the gcd function and print the output.
+     *
+     * @param      n1    The n 1
+     * @param      n2    The n 2
+     *
+     * @return     { description_of_the_return_value }
+     */
+    static int gcd(final int n1, final int n2) {
+        /**
+         * { var_description }
+         */
+        int i = 1, j = 0;
         int num = 0;
         int g = 0;
         if (n1 > n2) {
@@ -43,7 +51,7 @@ final class Solution {
                 j = j + 1;
             }
         }
-        if (j == 2) {
+        if (j == 1) {
             return 1;
         }
         return a[j - 1];
