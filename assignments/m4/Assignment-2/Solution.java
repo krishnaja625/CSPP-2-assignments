@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 /**
  * Class for solution.
  */
@@ -6,7 +6,8 @@ public class Solution {
     /**
      * Constructs the object.
      */
-    protected Solution() { }
+    protected Solution() { 
+    }
     /**
      * { function_description }.
      *
@@ -41,7 +42,7 @@ public class Solution {
             for (i = 0; i < m; i++) {
                 for (j = 0; j < n; j++) {
                     System.out.print(c[i][j]);
-                    if (j != n-1) {
+                    if (j != n - 1) {
                         System.out.print(" ");
                     }
                 }
@@ -51,28 +52,30 @@ public class Solution {
         }
         else {
             System.out.println("not possible");
-        }
-        
+        }   
     }
     /**
      * { function_description }.
      *
      * @param      a     { parameter_description }
      * @param      b     { parameter_description }
+     * @param      m     { parameter_description }
+     * @param      n     { parameter_description }
      *
      * @return     { description_of_the_return_value }
      */
 
-    static int[][] summation(final int[][] a, final int[][] b, final int m, final int n) {
+    static int[][] summation(final int[][] a,
+     final int[][] b, final int m, final int n) {
         /**
          * { var_description }
          */
-        int c[][];
+        int[][] c;
         c = new int[m][n];
         for (int i = 0; i < m; i++) {
-        	for (int j = 0; j < n; j++) {
+            for (int j = 0; j < n; j++) {
                 c[i][j] = a[i][j] + b[i][j];
-        	}
+            }
         }
         return c;
     }
