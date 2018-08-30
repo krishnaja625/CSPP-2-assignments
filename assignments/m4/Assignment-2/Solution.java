@@ -6,7 +6,7 @@ public class Solution {
     /**
      * Constructs the object.
      */
-    protected Solution() { 
+    protected Solution() {
     }
     /**
      * { function_description }.
@@ -48,11 +48,10 @@ public class Solution {
                 }
                 System.out.println();
             }
-
         }
         else {
             System.out.println("not possible");
-        }   
+        }
     }
     /**
      * { function_description }.
