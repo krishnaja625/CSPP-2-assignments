@@ -37,8 +37,9 @@ public class Solution {
         c = summation(a, b, m, n);
         for (i = 0; i < m; i++) {
             for (j = 0; j < n; j++) {
-                System.out.println(c[i][j]);
+                System.out.println(c[i][j]+ " ");
             }
+            System.out.println();
             }
     }
     /**
