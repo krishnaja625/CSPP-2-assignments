@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 /**
  * Class for solution.
  */
@@ -36,7 +36,8 @@ public class Solution {
         /**
          * { var_description }
          */
-        int large = 0;
+        int large;
+        large = a[0];
         for (int i = 0; i < a.length; i++) {
             if (large < a[i]) {
                 large = a[i];
