@@ -1,6 +1,3 @@
-/**
- * { item_description }.
- */
 import java.util.Scanner;
 /**
  * { item_description }.
