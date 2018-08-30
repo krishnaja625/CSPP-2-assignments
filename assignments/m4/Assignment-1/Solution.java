@@ -2,8 +2,7 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution
-{
+public class Solution {
     /**
      * Constructs the object.
      */
@@ -46,4 +45,5 @@ public class Solution
         return large;
     }
 }
+
 
