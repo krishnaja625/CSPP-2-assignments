@@ -5,11 +5,11 @@ import java.util.Scanner;
 /**
  * { item_description }.
  */
-final class FirstLast6 {
+final class Average {
 /**
 *Fill the main function to print the number of 7's between 1 to n.
 */
-    protected FirstLast6() { }
+    protected Average() { }
 /**
  * { function_description }.
  * @param      args  The arguments
@@ -28,7 +28,7 @@ final class FirstLast6 {
             for (i = 0; i < n; i++) {
                 a[i] = scan.nextInt();
                 }
-            System.out.println(firstLast6(a));
+            System.out.println(average(a));
         }
     }
     /**
@@ -38,14 +38,15 @@ final class FirstLast6 {
      *
      * @return     { description_of_the_return_value }
      */
-    static boolean firstLast6(final int[] a) {
+    static float average(final int[] a) {
         /**
          * { var_description }
          */
-        if ( a[0] == 6 || a[a.length - 1] == 6) {
-            return true;
+        float sum = 0.0f;
+        for (int i = 0; i < a.length; i++) {
+        sum = sum + a[i];
         }
-        return false;
+        return sum/(a.length);
     }
 }
 
