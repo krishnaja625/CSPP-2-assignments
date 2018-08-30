@@ -42,7 +42,7 @@ public class Solution {
                 for (j = 0; j < n; j++) {
                     System.out.print(c[i][j]);
                     if (j != n-1) {
-                        System.out.println(" ");
+                        System.out.print(" ");
                     }
                 }
                 System.out.println();
