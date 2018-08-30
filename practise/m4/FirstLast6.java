@@ -21,7 +21,14 @@ final class FirstLast6 {
         Scanner s = new Scanner(System.in);
         int n= s.nextInt();
         if (n >= 1) {
-            System.out.println(firstLast6(n));
+            int i = 0;
+            int[] a;
+            a = new int[n];
+            Scanner scan = new Scanner(System.in);
+            for (i = 0; i < n; i++) {
+                a[i] = scan.nextInt();
+                }
+            System.out.println(firstLast6(a));
         }
     }
     /**
@@ -31,18 +38,11 @@ final class FirstLast6 {
      *
      * @return     { description_of_the_return_value }
      */
-    static boolean firstLast6(final int n) {
+    static boolean firstLast6(final int[] a) {
         /**
          * { var_description }
          */
-        int i = 0;
-        int[] a;
-        a = new int[n];
-        Scanner scan = new Scanner(System.in);
-        for (i = 0; i < n; i++) {
-            a[i] = scan.nextInt();
-            }
-        if ( a[0] == 6 || a[n-1] == 6) {
+        if ( a[0] == 6 || a[a.length - 1] == 6) {
             return true;
         }
         return false;
