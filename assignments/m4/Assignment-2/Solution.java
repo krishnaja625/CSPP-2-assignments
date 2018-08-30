@@ -25,22 +25,31 @@ public class Solution {
                 a[i][j] = sc.nextInt();
             }
             }
+        int mb = sc.nextInt();
+        int nb = sc.nextInt();
         int[][] b;
-        b = new int[m][n];
-        for (i = 0; i < m; i++) {
-            for (j = 0; j < n; j++) {
+        b = new int[mb][nb];
+        for (i = 0; i < mb; i++) {
+            for (j = 0; j < nb; j++) {
                 b[i][j] = sc.nextInt();
             }
             }
-        int[][] c;
-        c = new int[m][n];
-        c = summation(a, b, m, n);
-        for (i = 0; i < m; i++) {
-            for (j = 0; j < n; j++) {
-                System.out.print(c[i][j]+ " ");
+        if (mb == m && nb == n) {
+            int[][] c;
+            c = new int[m][n];
+            c = summation(a, b, m, n);
+            for (i = 0; i < m; i++) {
+                for (j = 0; j < n; j++) {
+                    System.out.print(c[i][j]+ " ");
+                }
+                System.out.println();
             }
-            System.out.println();
-            }
+
+        }
+        else {
+            System.out.println("not possible");
+        }
+        
     }
     /**
      * { function_description }.
