@@ -1,3 +1,6 @@
+/**
+ * author: @krish
+ */
 import java.util.Scanner;
 /**
  * Class for solution.
