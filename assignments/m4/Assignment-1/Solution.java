@@ -11,9 +11,8 @@ public class Solution
             int i = 0;
             int[] a;
             a = new int[n];
-            Scanner scan = new Scanner(System.in);
             for (i = 0; i < n; i++) {
-                a[i] = scan.nextInt();
+                a[i] = sc.nextInt();
                 }
             System.out.println(largest(a));
         }
