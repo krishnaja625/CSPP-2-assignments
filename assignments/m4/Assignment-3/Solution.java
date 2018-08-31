@@ -29,9 +29,11 @@ public class Solution {
     static String binaryToDecimal(String s) {
         int sum = 0;
         int x = 1;
+        int j = 0;
         for(int i = s.length() - 1; i >= 0 ; i--) {
             sum = sum + (x * Character.getNumericValue(s.charAt(i)));
-            x = (int) Math.pow(2, i);
+            x = (int) Math.pow(2, j);
+            j++;
         }
         return Integer.toString(sum);
     }
