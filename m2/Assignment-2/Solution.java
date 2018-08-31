@@ -1,10 +1,13 @@
 /**
-    * Do not modify this main function.
+ * { item_description }
+ */
+/**
+    * importing scanner.
 */
 import java.util.Scanner;
 /**
-    * Do not modify this main function.
-*/
+ * This is a class named solution.
+ */
 final class Solution {
 /**
 *Do not modify this main function.
