@@ -18,8 +18,7 @@ public class Solution {
      *
      * @param      args  It is an array of strings
      */
-    public static void main(final String[] args)
-    {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         String reverse = reverseString(s);
