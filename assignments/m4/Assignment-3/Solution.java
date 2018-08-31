@@ -10,7 +10,7 @@ public class Solution
 	{
 		Scanner sc=new Scanner(System.in);
 		int n= sc.nextInt();
-		// sc.nextLine();
+		sc.nextLine();
 		for(int i=0;i<n;i++) {
 			String s=sc.nextLine();
 			String res=binaryToDecimal(s);//Write binaryToDecimal function
@@ -28,15 +28,16 @@ public class Solution
         /**
          * { var_description }
          */
-        int decimalvalue = 0;
-        int k = Integer.parseInt(String.valueOf(s));
+        double decimalvalue = 0;
+        long k = Long.parseLong(s);
         String a = "";
         for (int i = 0; i < s.length(); i++) {
         	decimalvalue = decimalvalue + (int)Math.pow(2,i) * (k % 10);
         	k = k/10;
         }
-        a = Integer.toString(decimalvalue);
-        return a;
+        System.out.println(decimalvalue);
+        // a = Integer.toString(decimalvalue);
+        return "a";
 
     }
 
