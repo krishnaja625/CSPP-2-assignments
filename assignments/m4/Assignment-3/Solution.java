@@ -34,7 +34,6 @@ public class Solution
         	decimalvalue = decimalvalue + (int)Math.pow(2,i) * (k % 10);
         	k = k/10;
         }
-        System.out.println(decimalvalue);
         int a = (int) decimalvalue;
         return String.valueOf(a);
 
