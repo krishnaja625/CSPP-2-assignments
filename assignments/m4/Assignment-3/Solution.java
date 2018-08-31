@@ -27,17 +27,17 @@ public class Solution {
         }
     }
     /**
-     * { convertion of binary to decimal }
+     * { convertion of binary to decimal }.
      *
      * @param      s     { s is of string type }
      *
      * @return     { the return type is string }
      */
-    static String binaryToDecimal(String s) {
+    static String binaryToDecimal(final String s) {
         int sum = 0;
         int x = 1;
         int j = s.length() - 1;
-        for(int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < s.length(); i++) {
             x = (int) Math.pow(2, j);
             sum = sum + (x * Character.getNumericValue(s.charAt(i)));
             j--;
