@@ -18,15 +18,14 @@ public class Solution {
      *
      * @param      args  It is an array of strings
      */
-	public static void main(String[] args)
-	{
-		Scanner sc = new Scanner(System.in);
-		String s = sc.nextLine();
-		String reverse = reverseString(s);	
-		System.out.println(reverse);
-		
-	}
-	//
+    public static void main(final String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String reverse = reverseString(s);
+        System.out.println(reverse);
+    }
+    //
     /**
      * { Write reverseString function }.
      *
@@ -41,20 +40,14 @@ public class Solution {
         String[] a = s.split("");
         String[] b = new String[s.length()];
         String c = "";
-        // for (int i = 0; i < a.length; i++) {
-        // 	System.out.println(a[i]);
-        // }
         int j = a.length - 1;
         for (int i = 0; i < a.length; i++) {
-        	b[j] = a[i];
-        	j--;
+            b[j] = a[i];
+            j--;
         }
         for (int i = 0; i < a.length; i++) {
         c += b[i];
-        // System.out.print(b[i]);
         }
-        // String str = Arrays.toString(s);
-        // return String.Concat(b);
         return c;
     }
 }
