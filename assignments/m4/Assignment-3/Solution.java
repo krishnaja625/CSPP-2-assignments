@@ -9,7 +9,7 @@ public class Solution
 	{
 		Scanner sc=new Scanner(System.in);
 		int n= sc.nextInt();
-		for(int i=0;i<=n;i++){
+		for(int i=0;i<n;i++) {
 			String s=sc.nextLine();
 			String res=binaryToDecimal(s);//Write binaryToDecimal function
 			System.out.println(res);
@@ -30,7 +30,7 @@ public class Solution
         int k = Integer.parseInt(String.valueOf(s));
         String a = "";
         for (int i = 0; i < s.length(); i++) {
-        	decimalvalue = decimalvalue + (2^i)*k%10;
+        	decimalvalue = decimalvalue + (2^i)*(k%10);
         	k = k/10;
         }
         a = Integer.toString(decimalvalue);
