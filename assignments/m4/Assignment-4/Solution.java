@@ -24,29 +24,18 @@ public class Solution {
         String reverse = reverseString(s);
         System.out.println(reverse);
     }
-    //
     /**
-     * { Write reverseString function }.
+     * {reverse of the string}.
      *
-     * @param      s     { s is of string type }
+     * @param      s     s is a string.
      *
-     * @return     { the return type is string }
+     * @return     returns reverse of a string s.
      */
     static String reverseString(final String s) {
-        /**
-         * { To reverse the given string }.
-         */
-        String[] a = s.split("");
-        String[] b = new String[s.length()];
-        String c = "";
-        int j = a.length - 1;
-        for (int i = 0; i < a.length; i++) {
-            b[j] = a[i];
-            j--;
+        String str1 = "";
+        for (int i = s.length() - 1; i >= 0; i--) {
+            str1 += s.charAt(i);
         }
-        for (int i = 0; i < a.length; i++) {
-        c += b[i];
-        }
-        return c;
+        return str1;
     }
-}
+    }
