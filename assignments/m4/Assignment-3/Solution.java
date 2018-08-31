@@ -13,7 +13,7 @@ public class Solution {
     */
     protected Solution() { }
     /**
-     * { function_description }.
+     * { main function }.
      *
      * @param      args  The arguments
      */
@@ -28,15 +28,13 @@ public class Solution {
         }
     }
     /**
-     * { function_description }.
-     *
-     * @param      s     { parameter_description }
-     *
-     * @return     { description_of_the_return_value }
+     * { ffunction to convert binary to decimal }.
+     * @param      s     { s is of string type }
+     * @return     { the return type is string }
      */
     static String binaryToDecimal(final String s) {
         /**
-         * { var_description }.
+         * { convertion of binary to decimal }.
          */
         double decimalvalue = 0;
         long k = Long.parseLong(s);
