@@ -6,23 +6,22 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution
-{
-	/**
-	 * { function_description }.
-	 *
-	 * @param      args  The arguments
-	 */
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		sc.nextLine();
-		for(int i = 0; i < n; i++) {
-			String s = sc.nextLine();
-			String res = binaryToDecimal(s);
-			System.out.println(res);
-		}
-	}
+public class Solution {
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.nextLine();
+        for(int i = 0; i < n; i++) {
+            String s = sc.nextLine();
+            String res = binaryToDecimal(s);
+            System.out.println(res);
+        }
+    }
     /**
      * { function_description }.
      *
@@ -38,9 +37,9 @@ public class Solution
         long k = Long.parseLong(s);
         final int x = 10;
         for (int i = 0; i < s.length(); i++) {
-        	decimalvalue = decimalvalue + 
-        	(int) Math.pow(2,i) * (k % x);
-        	k = k / x;
+            decimalvalue = decimalvalue
+            + (int) Math.pow(2 , i) * (k % x);
+            k = k / x;
         }
         int a = (int) decimalvalue;
         return String.valueOf(a);
