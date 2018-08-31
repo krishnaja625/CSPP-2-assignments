@@ -20,33 +20,19 @@ public class Solution {
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        sc.nextLine();
         for (int i = 0; i < n; i++) {
-            String s = sc.nextLine();
-            String res = binaryToDecimal(s);
+            String s = sc.next();
+            String res=binaryToDecimal(s);
             System.out.println(res);
         }
     }
-    /**
-     * { ffunction to convert binary to decimal }.
-     * @param      s     { s is of string type }
-     * @return     { the return type is string }
-     */
-    static String binaryToDecimal(final String s) {
-        /**
-         * { convertion of binary to decimal }.
-         */
-        double decimalvalue = 0;
-        long k = Long.parseLong(s);
-        final int x = 10;
-        for (int i = 0; i < s.length(); i++) {
-            decimalvalue = decimalvalue
-            + (int) Math.pow(2, i) * (k % x);
-            k = k / x;
+    static String binaryToDecimal(String s) {
+        int base = 1;
+        int sum = 0;
+        for(int i = s.length() - 1; i >= 0 ; i--) {
+            sum = sum + ((int) Math.pow(2, i) * Character.getNumericValue(s.charAt(i)));
         }
-        int a = (int) decimalvalue;
-        return String.valueOf(a);
-
+        return Integer.toString(sum);
     }
 
 }
