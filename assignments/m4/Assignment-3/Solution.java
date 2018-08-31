@@ -29,10 +29,10 @@ public class Solution {
     static String binaryToDecimal(String s) {
         int sum = 0;
         int x = 1;
-        int j = s.length();
-        for(int i = 0; i < s.length(); i--) {
+        int j = s.length() - 1;
+        for(int i = 0; i < s.length(); i++) {
             sum = sum + (x * Character.getNumericValue(s.charAt(i)));
-            x = (int) Math.pow(2, (j - 1));
+            x = (int) Math.pow(2, j);
             j++;
         }
         return Integer.toString(sum);
