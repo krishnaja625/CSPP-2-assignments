@@ -31,8 +31,8 @@ public class Solution {
         int x = 1;
         int j = s.length() - 1;
         for(int i = 0; i < s.length(); i++) {
-            sum = sum + (x * Character.getNumericValue(s.charAt(i)));
             x = (int) Math.pow(2, j);
+            sum = sum + (x * Character.getNumericValue(s.charAt(i)));
             j--;
         }
         return Integer.toString(sum);
