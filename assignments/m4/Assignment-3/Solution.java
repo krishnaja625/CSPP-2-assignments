@@ -33,7 +33,7 @@ public class Solution {
         for(int i = 0; i < s.length(); i++) {
             sum = sum + (x * Character.getNumericValue(s.charAt(i)));
             x = (int) Math.pow(2, j);
-            j++;
+            j--;
         }
         return Integer.toString(sum);
     }
