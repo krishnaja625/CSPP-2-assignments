@@ -30,14 +30,13 @@ public class Solution
          */
         double decimalvalue = 0;
         long k = Long.parseLong(s);
-        String a = "";
         for (int i = 0; i < s.length(); i++) {
         	decimalvalue = decimalvalue + (int)Math.pow(2,i) * (k % 10);
         	k = k/10;
         }
         System.out.println(decimalvalue);
-        // a = Integer.toString(decimalvalue);
-        return "a";
+        int a = (int) decimalvalue;
+        return String.valueOf(a);
 
     }
 
