@@ -12,8 +12,7 @@ public class Solution
 	 *
 	 * @param      args  The arguments
 	 */
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		sc.nextLine();
@@ -36,9 +35,10 @@ public class Solution
          */
         double decimalvalue = 0;
         long k = Long.parseLong(s);
+        final int x = 10;
         for (int i = 0; i < s.length(); i++) {
-        	decimalvalue = decimalvalue + (int)Math.pow(2,i) * (k % 10);
-        	k = k / 10;
+        	decimalvalue = decimalvalue + (int)Math.pow(2,i) * (k % x);
+        	k = k / x;
         }
         int a = (int) decimalvalue;
         return String.valueOf(a);
