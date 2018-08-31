@@ -27,10 +27,11 @@ public class Solution
          * { var_description }
          */
         int decimalvalue = 0;
+        int k = Integer.parseInt(String.valueOf(s));
         String a = "";
-        for (int i = s.length() - 1; i >= 0; i--) {
-        	int k = Integer.parseInt(String.valueOf(s.charAt(i)));
-        	decimalvalue += (2^i)*k;
+        for (int i = 0; i < s.length(); i++) {
+        	decimalvalue = decimalvalue + (2^i)*k%10;
+        	k = k/10;
         }
         a = Integer.toString(decimalvalue);
         return a;
