@@ -28,11 +28,14 @@ final class exam2 {
         int[][] c = new int[rows][columns]; 
         int k = 0;
         int x = 0;
-        int z = 0;
-        int[] multiples = {0, 100, 200, 300, 400, 500, 600};
+        int[] multiples = new int[10];
+        for (int i = 0; i < 10; i++) {
+            multiples[i] = i * 100; 
+        }
+ /*       int[] multiples = {0, 100, 200, 300, 400, 500, 600};*/
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                for (z = 0; z < multiples.length; z++) {
+                for (int z = 0; z < multiples.length; z++) {
                     if (multiples[z] - a[i][j] > 0) {
                         k = multiples[z];
                         x = z;
