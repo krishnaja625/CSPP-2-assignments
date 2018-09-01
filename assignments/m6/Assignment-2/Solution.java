@@ -30,7 +30,7 @@ final class Solution {
         int x = 0;
         final int p = 10;
         final int q = 100;
-        final int r = 50;
+        final int r = 49;
         int[] multiples = new int[p];
         for (int i = 0; i < p; i++) {
             multiples[i] = i * q; 
@@ -44,12 +44,11 @@ final class Solution {
                         break;
                     }
                 }
-                if (k - a[i][j] <= 49 && k - a[i][j] >= 0){
+                if (k - a[i][j] <= r && k - a[i][j] >= 0) {
                     c[i][j] = k;
                 } else {
                     c[i][j] = k;
                     c[i][j] = multiples[x - 1];
-
                 }
             }
     }
