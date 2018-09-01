@@ -3,13 +3,13 @@ import java.util.Scanner;
  * Write a java program to round the
  * elements of a matrix to the nearest 100.
  *
- * @author : 
+ * @author : krishnaja.
  */
-final class Solution {
+final class exam2 {
     /**
      * Constructs the object.
      */
-    private Solution() {
+    private exam2() {
         //not used
     }
     /**
@@ -24,29 +24,28 @@ final class Solution {
      */
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 
-	// write ypur code here.
+    // write ypur code here.
         int[][] c = new int[rows][columns]; 
-/*        for i
-        int[] multiples = {0, 100, 200, 300, 400, 500, 600};*/
+        int k = 0;
+        int x = 0;
+        int z = 0;
+        int[] multiples = {0, 100, 200, 300, 400, 500, 600};
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                if (a[i][j] <= 49 && a[i][j] >= 0){
-                    c[i][j] = 0;
-                } else if (a[i][j] <= 149 && a[i][j] >= 50  ) {
-                    c[i][j] = 100;
-                } else if (a[i][j] <= 249 && a[i][j] >= 150  ) {
-                    c[i][j] = 200;     
+                for (z = 0; z < multiples.length; z++) {
+                    if (multiples[z] - a[i][j] > 0) {
+                        k = multiples[z];
+                        x = z;
+                        break;
+                    }
                 }
-                else if (a[i][j] <= 349 && a[i][j] >= 250  ) {
-                    c[i][j] = 300;
-                } else if (a[i][j] <= 449 && a[i][j] >= 350  ) {
-                    c[i][j] = 400;
+                if ((k - a[i][j]) <= 49 && a[i][j] >= 0){
+                    c[i][j] = k;
+                } else {
+                    c[i][j] = multiples[x + 1];
+
                 }
-                else if (a[i][j] <= 549 && a[i][j] >= 450  ) {
-                    c[i][j] = 500;
-                }
-        }
-	
+            }
     }
     return c;
 }
