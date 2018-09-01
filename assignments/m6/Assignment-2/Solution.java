@@ -44,11 +44,10 @@ final class Solution {
                         break;
                     }
                 }
-                if (a[i][j] - k <= r) {
-                    /*c[i][j] = k;*/
-                    c[i][j] = multiples[x - 1];
+                if (k - a[i][j] <= 49 && k - a[i][j] >= 0){
+                    c[i][j] = k;
                 } else {
-                    /*c[i][j] = k;*/
+                    c[i][j] = k;
                     c[i][j] = multiples[x + 1];
 
                 }
