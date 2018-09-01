@@ -5,11 +5,11 @@ import java.util.Scanner;
  *
  * @author : krishnaja.
  */
-final class exam2 {
+final class Solution {
     /**
      * Constructs the object.
      */
-    private exam2() {
+    private Solution() {
         //not used
     }
     /**
@@ -22,17 +22,19 @@ final class exam2 {
      *
      * @return     Matrix of the rounded elements
      */
-    static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
-
+    static int[][] roundHundred(final int[][] a,
+     final int rows, final int columns) {
     // write ypur code here.
         int[][] c = new int[rows][columns]; 
         int k = 0;
         int x = 0;
-        int[] multiples = new int[10];
-        for (int i = 0; i < 10; i++) {
-            multiples[i] = i * 100; 
+        final int p = 10;
+        final int q = 100;
+        final int r = 49;
+        int[] multiples = new int[p];
+        for (int i = 0; i < p; i++) {
+            multiples[i] = i * q; 
         }
- /*       int[] multiples = {0, 100, 200, 300, 400, 500, 600};*/
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 for (int z = 0; z < multiples.length; z++) {
@@ -42,7 +44,7 @@ final class exam2 {
                         break;
                     }
                 }
-                if ((k - a[i][j]) <= 49 && a[i][j] >= 0){
+                if ((k - a[i][j]) <= r && a[i][j] >= 0) {
                     c[i][j] = k;
                 } else {
                     c[i][j] = multiples[x + 1];
