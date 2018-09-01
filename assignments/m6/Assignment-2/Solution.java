@@ -25,7 +25,7 @@ final class Solution {
     static int[][] roundHundred(final int[][] a,
      final int rows, final int columns) {
     // write ypur code here.
-        int[][] c = new int[rows][columns]; 
+        int[][] c = new int[rows][columns];
         int k = 0;
         int x = 0;
         final int p = 10;
@@ -33,7 +33,7 @@ final class Solution {
         final int r = 49;
         int[] multiples = new int[p];
         for (int i = 0; i < p; i++) {
-            multiples[i] = i * q; 
+            multiples[i] = i * q;
         }
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
