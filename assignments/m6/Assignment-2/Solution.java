@@ -30,7 +30,7 @@ final class Solution {
         int x = 0;
         final int p = 10;
         final int q = 100;
-        final int r = 49;
+        final int r = 51;
         int[] multiples = new int[p];
         for (int i = 0; i < p; i++) {
             multiples[i] = i * q; 
