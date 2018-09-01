@@ -29,7 +29,7 @@ final class Solution {
 /*        for i
         int[] multiples = {0, 100, 200, 300, 400, 500, 600};*/
         for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns - 1; j++) {
+            for (int j = 0; j < columns; j++) {
                 if (a[i][j] <= 49 && a[i][j] >= 0){
                     c[i][j] = 0;
                 } else if (a[i][j] <= 149 && a[i][j] >= 50  ) {
