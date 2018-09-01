@@ -48,8 +48,8 @@ final class Solution {
                     /*c[i][j] = k;*/
                     c[i][j] = multiples[x - 1];
                 } else {
-                    c[i][j] = k;
-                    /*c[i][j] = multiples[x - 1];*/
+                    /*c[i][j] = k;*/
+                    c[i][j] = multiples[x + 1];
 
                 }
             }
