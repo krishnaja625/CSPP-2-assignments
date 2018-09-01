@@ -44,7 +44,7 @@ final class Solution {
                         break;
                     }
                 }
-                if ((k - a[i][j]) <= r && a[i][j] >= 0) {
+                if (a[i][j] >= r) {
                     c[i][j] = k;
                 } else {
                     c[i][j] = multiples[x + 1];
