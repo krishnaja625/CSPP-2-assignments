@@ -45,9 +45,11 @@ final class Solution {
                     }
                 }
                 if (a[i][j] - k <= r) {
-                    c[i][j] = k;
-                } else {
+                    /*c[i][j] = k;*/
                     c[i][j] = multiples[x - 1];
+                } else {
+                    c[i][j] = k;
+                    /*c[i][j] = multiples[x - 1];*/
 
                 }
             }
