@@ -16,7 +16,7 @@ class InputValidator {
      * Constructor initializes the person's name.
      * @param      name  The name
      */
-    public InputValidator(final String name) {
+    InputValidator(final String name) {
     this.name = name;
     }
     /**
@@ -39,10 +39,12 @@ public class Solution {
     /** { main funtion to perform matrix addition }.
      * @param      args  The arguments
      */
-    public static void main (final String args[]) {
-        Scanner s = new Scanner (System.in);
+    private Solution() {
+    }
+    public static void main(final String[] args) {
+        Scanner s = new Scanner(System.in);
         String input = s.next();
         InputValidator i = new InputValidator(input);       
-        System.out.println (i.validateData());
+        System.out.println(i.validateData());
     }
 }
