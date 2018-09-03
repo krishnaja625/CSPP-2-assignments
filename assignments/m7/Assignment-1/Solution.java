@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 class InputValidator {
     /**
-     * The atributes and methods for InputValidator.
+     * A private attribute for InputValidator.
      */
     private String data;
     /**
