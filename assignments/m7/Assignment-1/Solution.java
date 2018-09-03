@@ -11,13 +11,14 @@ class InputValidator {
     /**
      * The atributes and methods for InputValidator.
      */
-    private String name;
+    private String data;
+
     /**
      * Constructor initializes the person's name.
      * @param      name  The name
      */
     InputValidator(final String name) {
-    this.name = name;
+    data = name;
     }
     /**
      * Function to validate the data.
@@ -25,8 +26,8 @@ class InputValidator {
      */
     boolean validateData() {
         final int n = 6;
-        int k = name.length();
-        if (k >= n) {
+        int length = data.length();
+        if (length >= n) {
             return true;
         }
         return false;
