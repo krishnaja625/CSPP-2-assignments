@@ -12,6 +12,9 @@ class InputValidator {
      * The atributes and methods for InputValidator.
      */
     private String data;
+    /**
+     * A private attribute for InputValidator.
+     */
     private int length;
     /**
      * Constructor initializes the person's name.
