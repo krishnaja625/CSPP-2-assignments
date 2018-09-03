@@ -35,16 +35,21 @@ class InputValidator {
 /**
  * Class for solution.
  */
-public class Solution {
-    /** { main funtion to perform matrix addition }.
-     * @param      args  The arguments
+final class Solution {
+    /**
+     * Constructs the object.
      */
     private Solution() {
     }
+    /**
+     * main funtion to perform validation.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
-        InputValidator i = new InputValidator(input);       
+        InputValidator i = new InputValidator(input);
         System.out.println(i.validateData());
     }
 }
