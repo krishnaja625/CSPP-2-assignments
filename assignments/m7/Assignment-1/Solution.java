@@ -12,6 +12,7 @@ class InputValidator {
      * The atributes and methods for InputValidator.
      */
     private String data;
+    private int length;
 
     /**
      * Constructor initializes the person's name.
@@ -19,6 +20,7 @@ class InputValidator {
      */
     InputValidator(final String name) {
     data = name;
+    length = data.length();
     }
     /**
      * Function to validate the data.
@@ -26,7 +28,6 @@ class InputValidator {
      */
     boolean validateData() {
         final int n = 6;
-        int length = data.length();
         if (length >= n) {
             return true;
         }
