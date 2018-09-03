@@ -13,7 +13,6 @@ class InputValidator {
      */
     private String data;
     private int length;
-
     /**
      * Constructor initializes the person's name.
      * @param      name  The name
