@@ -1,5 +1,5 @@
 /**
- * author: @krish
+ * author: @krishnaja
  */
 import java.util.Scanner;
 /**
@@ -11,9 +11,9 @@ public class Solution {
      */
     protected Solution() { }
     /**
-     * { function_description }.
+     * main function from where execution starts.
      *
-     * @param      args  The arguments
+     * @param      args  String array named args is created.
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -29,15 +29,15 @@ public class Solution {
         }
     }
     /**
-     * { function_description }.
+     * To find the largest number in an array of numbers.
      *
-     * @param      a     { parameter_description }
+     * @param      a     A parameter a of int type created.
      *
-     * @return     { description_of_the_return_value }
+     * @return     { return type is int }
      */
     static int largest(final int[] a) {
         /**
-         * { var_description }
+         * statements to find largest number.
          */
         int large;
         large = a[0];
