@@ -69,7 +69,8 @@ final class List {
      */
     public List() {
         size = 0;
-        list = new int[10];
+        final int k = 10;
+        list = new int[k];
 
         // what are the two variables to be initialized here?
         // think about the private variables described above.
@@ -142,20 +143,19 @@ final class List {
      * The method returns void (nothing)
      */
     /**
-     * function to remove an element. 
+     * function to remove an element.
      *
      * @param      index  The index
      */
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if(index >= 0 && index < size) {
-            for(int j = index; j < size - 1; j++) {
-                list[j] = list[j+1];
+        if (index >= 0 && index < size) {
+            for (int j = index; j < size - 1; j++) {
+                list[j] = list[j + 1];
             }
             size = size - 1;
-        }
-        else {
+        } else {
             System.out.println("Index Out of Bounds Exception");
         }
 }
@@ -223,8 +223,7 @@ final class List {
         String c = ",";
         for (int i = 0; i < size; i++) {
             s += Integer.toString(list[i]);
-            if (i < size - 1)
-            {
+            if (i < size - 1) {
                 s += c;
             }
         }
@@ -276,6 +275,11 @@ final class List {
         }
     return -1;
     }
+    /**
+     * main function to get the desired output.
+     *
+     * @param      args  An array of string type.
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
