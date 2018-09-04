@@ -1,5 +1,5 @@
 /**
- * name krishnaja
+ * author: @krishnaja
  */
 import java.util.Scanner;
 /**
@@ -12,7 +12,7 @@ public class Solution {
     protected Solution() {
     }
     /**
-     * { function_description }.
+     * main to add two matrices.
      *
      * @param      args  The arguments
      */
@@ -56,16 +56,15 @@ public class Solution {
         }
     }
     /**
-     * { function_description }.
+     * function to add two matices.
      *
-     * @param      a     { parameter_description }
-     * @param      b     { parameter_description }
-     * @param      m     { parameter_description }
-     * @param      n     { parameter_description }
+     * @param      a     { matrix a }
+     * @param      b     { matrix b }
+     * @param      m     { number of rows }
+     * @param      n     { number of columns }
      *
-     * @return     { description_of_the_return_value }
+     * @return     returns an integer matrix
      */
-
     static int[][] summation(final int[][] a,
      final int[][] b, final int m, final int n) {
         /**
