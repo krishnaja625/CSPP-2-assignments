@@ -6,6 +6,7 @@ import java.io.BufferedInputStream;
  * To import Scanner.
  */
 import java.util.Scanner;
+import java.util.Arrays;
 /**
  * Abstract class named list is created.
  */
@@ -153,6 +154,7 @@ final class List {
             for (int j = index; j < size - 1; j++) {
                 list[j] = list[j + 1];
             }
+            list[size - 1] = 0;
             size = size - 1;
         } else {
             System.out.println("Index Out of Bounds Exception");
@@ -213,12 +215,12 @@ final class List {
      */
     public String toString() {
         // Replace the code below
-/*        int a[] = new int[size];
-        for(int i = 0; i <= size; i++){
+        int a[] = new int[size];
+        for(int i = 0; i < size; i++){
             a[i] = list[i];
         }
-        return Arrays.toString(a);*/
-        String s = "[";
+        return Arrays.toString(a);
+        /*String s = "[";
         String c = ",";
         for (int i = 0; i < size; i++) {
             s += Integer.toString(list[i]);
@@ -227,7 +229,7 @@ final class List {
             }
         }
         s += "]";
-        return s;
+        return s;*/
     }
     /**
      * Contains return true if the list has
