@@ -1,16 +1,24 @@
+/**
+ * To import BufferedInputStream.
+ */
 import java.io.BufferedInputStream;
+/**
+ * To import Scanner.
+ */
 import java.util.Scanner;
-public class List {
+/**
+ * Abstract class named list is created.
+ */
+final class List {
     //Implement all the methods mentioned to build a ListADT
 
-    /*
+    /**
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
      * An array would be good. Right?
      * So, assume we are only going to have ints in the list
      * We need to create an array of ints to store the items
      * added to the list.
-     *
      * Create a variable of the type int[]
      * Use the private access specifier
      * Why private access specifier and why not public?
@@ -29,7 +37,7 @@ public class List {
     // don't create the array yet using new
     // that's the job of the List constructor
     private int[] list;
-    /*
+    /**
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
      * If you add 2 items to the list then the size should be 2.
@@ -55,6 +63,9 @@ public class List {
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
+     */
+    /**
+     * Constructs the object.
      */
     public List() {
         size = 0;
@@ -84,7 +95,11 @@ public class List {
      * 
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    /**
+     * function to add the elements.
+     * @param      item  item is passed.
+     */
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         list[size] = item;
         size++;
@@ -94,8 +109,12 @@ public class List {
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * function to know the number of elements in an array.
+     *
+     * @return     returns an int.
      */
     public int size() {
         // replace the code below to implement the size method
@@ -122,7 +141,12 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int index) {
+    /**
+     * function to remove an element. 
+     *
+     * @param      index  The index
+     */
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if(index >= 0 && index < size) {
@@ -136,7 +160,7 @@ public class List {
         }
 }
 
-    /*
+    /**
      * Get method has to return the items that is
      * at the index position passed as an argument to the method.
      * If the item doesn't exist then return a -1 to indicate that
@@ -147,7 +171,14 @@ public class List {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int get(final int index) {
         // Replace the code below to write the code for get
         if (index >= 0 && index < size) {
             int element = list[index];
@@ -176,6 +207,11 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
 /*        int a[] = new int[size];
@@ -196,13 +232,20 @@ public class List {
         return s;
     } 
     
-    /*
+    /**
      * Contains return true if the list has
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
             if(list[i] == item) {
@@ -212,10 +255,17 @@ public class List {
         return false;
     }
 
-    /*
+    /**
      * Returns the index of the first occurrence 
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
+     */
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
      */
     public int indexOf(int item) {
         // Replace the code below
