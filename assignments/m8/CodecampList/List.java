@@ -239,9 +239,9 @@ final class List {
     /**
      * { function_description }.
      *
-     * @param      item  The item
+     * @param      item  item to be found is passed.
      *
-     * @return     { description_of_the_return_value }
+     * @return     return type is boolean.
      */
     public boolean contains(final int item) {
         // Replace the code below
@@ -261,9 +261,9 @@ final class List {
     /**
      * Searches for the first match.
      *
-     * @param      item  The item
+     * @param      item  item of which index to be found is passed.
      *
-     * @return     { description_of_the_return_value }
+     * @return     return type is integer.
      */
     public int indexOf(final int item) {
         // Replace the code below
