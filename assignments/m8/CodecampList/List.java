@@ -1,7 +1,5 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.Arrays;
-
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -187,7 +185,7 @@ public class List {
         return Arrays.toString(a);*/
         String s = "[";
         String c = ",";
-        for (int i = 0; i < size ;i++) {
+        for (int i = 0; i < size; i++) {
             s += Integer.toString(list[i]);
             if (i < size - 1)
             {
@@ -206,8 +204,8 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        for(int i = 0; i < size; i++){
-            if(list[i] == item){
+        for (int i = 0; i < size; i++) {
+            if(list[i] == item) {
                 return true;
             }
         }
@@ -222,14 +220,14 @@ public class List {
     public int indexOf(int item) {
         // Replace the code below
 
-        for(int i = 0; i < size; i++){
-            if(list[i] == item){
+        for(int i = 0; i < size; i++) {
+            if(list[i] == item) {
                 return i;
             }
         }
     return -1;
     }
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -269,6 +267,8 @@ public class List {
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                default:
                 break;
             }
         }
