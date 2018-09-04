@@ -9,11 +9,11 @@ import java.util.Scanner;
  */
 public class Solution {
     /**
-    *Do not modify this main function.
-    */
+     * Constructs the object.
+     */
     protected Solution() { }
     /**
-     * { main function }.
+     * main function to convert binary to decimal.
      *
      * @param      args  The arguments
      */
@@ -27,11 +27,11 @@ public class Solution {
         }
     }
     /**
-     * { convertion of binary to decimal }.
+     * function to convert binary to decimal.
      *
      * @param      s     { s is of string type }
      *
-     * @return     { the return type is string }
+     * @return     the return type is string
      */
     static String binaryToDecimal(final String s) {
         int sum = 0;
