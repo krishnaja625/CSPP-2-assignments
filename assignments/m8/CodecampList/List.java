@@ -83,7 +83,7 @@ final class List {
         // That is the initial value to use for size.
 
     }
-    
+
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -92,7 +92,7 @@ final class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
+     *
      * The method returns void (nothing)
      */
     /**
@@ -125,7 +125,7 @@ final class List {
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -168,7 +168,7 @@ final class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
     /**
@@ -183,7 +183,7 @@ final class List {
         if (index >= 0 && index < size) {
             int element = list[index];
             return element;
-        } 
+        }
         return -1;
     }
 
@@ -196,7 +196,7 @@ final class List {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
+     *
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -230,8 +230,7 @@ final class List {
         }
         s += "]";
         return s;
-    } 
-    
+    }
     /**
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -248,7 +247,7 @@ final class List {
     public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
-            if(list[i] == item) {
+            if (list[i] == item) {
                 return true;
             }
         }
@@ -256,7 +255,7 @@ final class List {
     }
 
     /**
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
@@ -267,11 +266,11 @@ final class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
 
-        for(int i = 0; i < size; i++) {
-            if(list[i] == item) {
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
                 return i;
             }
         }
