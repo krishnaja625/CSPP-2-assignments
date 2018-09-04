@@ -6,7 +6,6 @@ import java.io.BufferedInputStream;
  * To import Scanner.
  */
 import java.util.Scanner;
-import java.util.Arrays;
 /**
  * Abstract class named list is created.
  */
@@ -215,21 +214,21 @@ final class List {
      */
     public String toString() {
         // Replace the code below
-        int a[] = new int[size];
+/*        int a[] = new int[size];
         for(int i = 0; i < size; i++){
             a[i] = list[i];
         }
-        return Arrays.toString(a);
-        /*String s = "[";
+        return Arrays.toString(a);*/
+        String s = "[";
         String c = ",";
         for (int i = 0; i < size; i++) {
-            s += Integer.toString(list[i]);
+            s += list[i];
             if (i < size - 1) {
                 s += c;
             }
         }
         s += "]";
-        return s;*/
+        return s;
     }
     /**
      * Contains return true if the list has
