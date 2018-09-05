@@ -30,7 +30,7 @@ public class Fibonacci {
         int t1 = 0, t2 = 1;
         l.add(t1);
         l.add(t2);
-        for (int i = 1; i <= n; ++i) {
+        for (int i = 1; i < n - 1; ++i) {
             int sum = t1 + t2;
             t1 = t2;
             t2 = sum;
