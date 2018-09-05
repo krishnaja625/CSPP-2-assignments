@@ -61,8 +61,6 @@ public class List {
      * class variables with some default values.
      */
     
-    
-
     public List() {
 
         // what are the two variables to be initialized here?
@@ -76,6 +74,11 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
+        size = 0;
+    }
+
+    public List(int n) {
+        list = new int[n];
         size = 0;
     }
 
