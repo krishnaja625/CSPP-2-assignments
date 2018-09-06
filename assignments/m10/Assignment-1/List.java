@@ -360,7 +360,7 @@ public class List {
 			    resize();
 			    add(item);
 		} else {
-    	for (int i = size-1; i >= index; i--) {
+    	for (int i = size; i > index; i--) {
     		list[i] = list[i - 1];
     	}
     	list[index] = item;
