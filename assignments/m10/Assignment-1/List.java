@@ -7,7 +7,7 @@ import java.io.BufferedInputStream;
  */
 import java.util.Scanner;
 /**
- * class named list is created.                                                
+ * class named list is created.
  */
 final class List {
     //Implement all the methods mentioned to build a ListADT
