@@ -9,7 +9,7 @@ import java.util.Scanner;
 /**
  * class named list is created.
  */
-public class List {
+final class List {
 	//Implement all the methods mentioned to build a ListADT
 
     /**
@@ -106,7 +106,7 @@ public class List {
      *
      * @param      capacity  argument is of integer type.
      */
-    public List(int capacity) {
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -127,7 +127,7 @@ public class List {
      *
      * @param      item  an item which has to be added to the list.
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         if (size == list.length) {
             resize();
@@ -218,7 +218,7 @@ public class List {
      * @param      index  index of the item to be removed.
      */
 
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if(index >= 0 && index < size) {
@@ -249,7 +249,7 @@ public class List {
      *
      * @return     return type is integer.
      */
-    public int get(int index) {
+    public int get(final int index) {
         if(index < 0 || index >= size) {
             return -1;
         } else {
@@ -307,7 +307,7 @@ public class List {
      *
      * @return     return type is boolean.
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
 
@@ -323,7 +323,7 @@ public class List {
      *
      * @return     return type is integer.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         for(int i = 0; i < size; i++) {
             if(item == list[i])
                 return i;
@@ -335,7 +335,7 @@ public class List {
     /**
      * To add a list to the present list.
      */
-    public void addAll(int items[])
+    public void addAll(final int items[])
     {
         // write the logic 
         for (int i=0; i < items.length; i++) {
@@ -354,7 +354,7 @@ public class List {
          * @param      index  The index
          * @param      item   The item
          */
-    public void add(int index,int item) {
+    public void add(final int index, final int item) {
     	if (index >= 0) {
     		if (size == list.length) {
 			    resize();
@@ -380,7 +380,7 @@ public class List {
      *
      * @return     return type is integer.
      */
-    public int count(int item)
+    public int count(final int item)
     {
          // write the logic 
     	int count = 0;
@@ -396,7 +396,7 @@ public class List {
      *
      * @param      args  The arguments
      */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
