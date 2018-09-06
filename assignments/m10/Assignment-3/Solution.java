@@ -1,7 +1,10 @@
 /**
- * { item_description }
+ * To import BufferedInputStream
  */
 import java.io.BufferedInputStream;
+/**
+ * To import Scanner
+ */
 import java.util.Scanner;
 //A Class is implemented for Student details
 
@@ -59,10 +62,6 @@ class Student {
 
         return this.hashCode();
     }
-
-
-
-
     /**
      * Returns a string representation of the object.
      *
@@ -390,3 +389,4 @@ public final class Solution {
         }
     }
 }
+
