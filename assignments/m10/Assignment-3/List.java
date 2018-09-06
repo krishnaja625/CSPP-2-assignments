@@ -159,7 +159,7 @@ public class List<E> {
     public boolean contains(E item) {
 		//Write logic for contains method
         for (E data : list) {
-            if (data == item) {
+            if (data.equals(item)) {
                 return true;
             }
         }
