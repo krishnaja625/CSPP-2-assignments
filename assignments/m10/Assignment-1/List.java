@@ -78,7 +78,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        list = new int[20];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -339,7 +339,7 @@ public class List {
     {
         // write the logic 
         for (int i=0; i < items.length; i++) {
-        	list[size++] = items[i];
+        	add(items[i]);
         }
     }
 
@@ -355,12 +355,17 @@ public class List {
          * @param      item   The item
          */
     public void add(int index,int item) {
+        if (size == list.length) {
+		    resize();
+		    add(item);
+		} else {
     	for (int i = size; i >= index; i--) {
     		list[i] = list[i - 1];
     	}
     	list[index] = item;
     	size++;
     }
+}
     
     /* Returns the count of occurances of a given item in the list*/
     /**
