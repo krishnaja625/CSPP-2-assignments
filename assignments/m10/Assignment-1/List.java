@@ -10,7 +10,7 @@ import java.util.Scanner;
  * class named list is created.
  */
 final class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /**
      * The goal for the list is to store items.
@@ -71,7 +71,7 @@ final class List {
      * Constructs the object.
      */
     List() {
-    	final int k = 10;
+        final int k = 10;
 
         // what are the two variables to be initialized here?
         // think about the private variables described above.
@@ -316,12 +316,12 @@ final class List {
     public void addAll(final int[] items) {
         // write the logic
         for (int i = 0; i < items.length; i++) {
-        	add(items[i]);
+            add(items[i]);
         }
     }
      /*
         Inserts the specified element at the specified index
-	by moving all the elements to the right.
+    by moving all the elements to the right.
         The method returns void (nothing)
      */
         /**
@@ -331,20 +331,20 @@ final class List {
          * @param      item   The item
          */
     public void add(final int index, final int item) {
-    	if (index >= 0) {
-    		if (size == list.length) {
-			    resize();
-			    add(item);
-		} else {
-    	for (int i = size; i > index; i--) {
-    		list[i] = list[i - 1];
-    	}
-    	list[index] = item;
-    	size++;
-	    }
-	} else {
-		System.out.println("Negative Index Exception");
-	    }
+        if (index >= 0) {
+            if (size == list.length) {
+                resize();
+                add(item);
+        } else {
+        for (int i = size; i > index; i--) {
+            list[i] = list[i - 1];
+        }
+        list[index] = item;
+        size++;
+        }
+    } else {
+        System.out.println("Negative Index Exception");
+        }
 }
     /* Returns the count of occurances of a given item in the list*/
     /**
@@ -355,19 +355,19 @@ final class List {
      */
     public int count(final int item) {
          // write the logic
-    	int count = 0;
-    	for (int i = 0; i < size; i++) {
-    		if (list[i] == item) {
-    			count++;
-    		}
-    	}
+        int count = 0;
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
+                count++;
+            }
+        }
         return count;
     }
     /**
      * Main function to do the following.
      * @param      args  The arguments
      */
-	public static void main(final String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
         // code to read the test cases input file
@@ -432,6 +432,6 @@ final class List {
                 default:
             }
         }
-	}
+    }
 }
 
