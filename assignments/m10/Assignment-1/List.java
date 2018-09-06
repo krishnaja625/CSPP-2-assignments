@@ -310,16 +310,15 @@ final class List {
     array to the end of list*/
     /**
      * To add a list to the present list.
+     * @param      item  The item 
      */
-    public void addAll(final int items[])
-    {
-        // write the logic 
-        for (int i=0; i < items.length; i++) {
+    public void addAll(final int items[]) {
+        // write the logic
+        for (int i = 0; i < items.length; i++) {
         	add(items[i]);
         }
     }
-
-     /* 
+     /*
         Inserts the specified element at the specified index 
 	by moving all the elements to the right.
         The method returns void (nothing)
@@ -342,23 +341,19 @@ final class List {
     	list[index] = item;
     	size++;
 	    }
-	}
-	else {
+	} else {
 		System.out.println("Negative Index Exception");
 	    }
 }
-    
     /* Returns the count of occurances of a given item in the list*/
     /**
      * Function to count the occurance.
      *
      * @param      item  The item
-     *
      * @return     return type is integer.
      */
-    public int count(final int item)
-    {
-         // write the logic 
+    public int count(final int item) {
+         // write the logic
     	int count = 0;
     	for (int i = 0; i < size; i++) {
     		if (list[i] == item) {
@@ -369,13 +364,11 @@ final class List {
     }
     /**
      * Main function to do the following.
-     *
      * @param      args  The arguments
      */
 	public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
-
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
@@ -387,12 +380,11 @@ final class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                case "add":
-                if ((tokens.length) == 2){
+                if ((tokens.length) == 2) {
                 String[] t = tokens[1].split(",");
-                if (t.length == 1){
+                if (t.length == 1) {
                     l.add(Integer.parseInt(tokens[1]));
-                }
-                else{
+                } else {
                     if (t.length > 1)
                         l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
                     }
