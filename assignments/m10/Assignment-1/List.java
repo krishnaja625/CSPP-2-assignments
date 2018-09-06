@@ -355,7 +355,7 @@ public class List {
          * @param      item   The item
          */
     public void add(int index,int item) {
-    	for (int i = size; i > index; i--) {
+    	for (int i = size; i >= index; i--) {
     		list[i] = list[i - 1];
     	}
     	list[index] = item;
