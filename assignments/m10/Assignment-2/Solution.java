@@ -11,6 +11,12 @@ import java.util.Scanner;
  */
 class Solution {
     /**
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
+    /**
     * Main function to do the following.
     *
     * @param      args  The arguments
