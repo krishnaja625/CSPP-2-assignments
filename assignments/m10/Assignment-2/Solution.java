@@ -15,12 +15,15 @@ class Solution {
     *
     * @param      args  The arguments
     */
-	public static void main(final String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         StringList sl = new StringList();
-        StringListInterface l = (StringListInterface)sl;//Typecasting is done for StringListInterface
+        StringListInterface l = 
+        (StringListInterface) sl;
+        //Typecasting is done for StringListInterface
         // code to read the test cases input file
-        Scanner stdin = new Scanner(new BufferedInputStream(System.in));
+        Scanner stdin = new Scanner
+        (new BufferedInputStream(System.in));
         // check if there is one more line to process
         while (stdin.hasNext()) {
             // read the line
@@ -30,7 +33,7 @@ class Solution {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-	                l.add(tokens[1]);
+                    l.add(tokens[1]);
                 break;
                 case "addAll":
                 if (tokens.length == 2) {
@@ -66,5 +69,5 @@ class Solution {
                 default:
             }
         }
-	}
+    }
 }
