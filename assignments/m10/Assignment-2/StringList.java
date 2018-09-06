@@ -21,7 +21,7 @@ public class StringList implements StringListInterface{
      * An array would be good. Right?
      * So, assume we are only going to have strings in the list
      * We need to create an array of strings to store the items
-     * added to the list.
+     * added to the list...................................                       
      *
      * Create a variable of the type String[]
      * Use the private access specifier
