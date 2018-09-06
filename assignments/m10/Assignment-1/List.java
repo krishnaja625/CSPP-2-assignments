@@ -142,21 +142,19 @@ final class List {
      * Create a new array of the desired size,
      * and copy the contents from the original array to the new array,
      * using java.lang.System.arraycopy(...);
-     * 
      * Option 2
      * Use java.util.Arrays.copyOf(...) methods which returns a bigger array,
      * with the contents of the original array.
      * TODO
      * Create a method called resize(). Resize should create an new array that is
      * double the size of the old array.
-     * Then copy the contents of the old array to the new one.
-     * 
+     * Then copy the contents of the old array to the new one. 
      * When should the resize method be invoked and from where?
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of Object Oriented Programming to answer these questions :-)
-     *
+     * You know enough of Object Oriented 
+     * Programming to answer these questions :-)
      */
     /**
      * Function to change the size of list.
@@ -167,23 +165,19 @@ final class List {
         list = newlist;
     }
     // todo create resize method
-
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
      * The method returns an int. Empty list should return 0.
      */
     /**
      * To return the size.
-     *
      * @return     return type is integer.
      */
     public int size() {
         return size;
     }
-
     /*
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
@@ -206,15 +200,13 @@ final class List {
      */
     /**
      * Function to remove an item.
-     *
      * @param      index  index of the item to be removed.
      */
-
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if(index >= 0 && index < size) {
-            for(int i = index; i < size - 1; i++) {
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
@@ -224,7 +216,7 @@ final class List {
     }
 
     /*
-     * Get method has to return the items that is
+     * Get method has to return the items that is.
      * at the index position passed as an argument to the method.
      * If the item doesn't exist then return a -1 to indicate that
      * there is no element at that index.
@@ -235,20 +227,18 @@ final class List {
      * number of items in the list? Would size variable be useful?
      */
     /**
-     * Function to get the item
-     *
+     * Function to get the item.
      * @param      index  index at which the item is required.
      *
      * @return     return type is integer.
      */
     public int get(final int index) {
-        if(index < 0 || index >= size) {
+        if (index < 0 || index >= size) {
             return -1;
         } else {
             return list[index];
         }
     }
-
     /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
@@ -258,7 +248,6 @@ final class List {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -271,7 +260,6 @@ final class List {
      */
     /**
      * Returns a string representation of the object.
-     *
      * @return     String representation of the object.
      */
     public String toString() {
@@ -294,9 +282,7 @@ final class List {
      */
     /**
      * Function to check the item is present or not.
-     *
      * @param      item  The item
-     *
      * @return     return type is boolean.
      */
     public boolean contains(final int item) {
@@ -310,9 +296,7 @@ final class List {
      */
     /**
      * Searches for the first match.
-     *
      * @param      item  The item
-     *
      * @return     return type is integer.
      */
     public int indexOf(final int item) {
