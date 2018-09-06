@@ -78,7 +78,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        list = new int[20];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -356,9 +356,9 @@ public class List {
          */
     public void add(int index,int item) {
     	if (index >= 0) {
-    		        if (size == list.length) {
-		    resize();
-		    add(item);
+    		if (size == list.length) {
+			    resize();
+			    add(item);
 		} else {
     	for (int i = size; i >= index; i--) {
     		list[i] = list[i - 1];
