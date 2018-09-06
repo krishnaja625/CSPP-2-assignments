@@ -9,7 +9,7 @@ import java.util.Scanner;
 /**
  * class named Solution is created.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
@@ -75,3 +75,4 @@ class Solution {
         }
     }
 }
+
