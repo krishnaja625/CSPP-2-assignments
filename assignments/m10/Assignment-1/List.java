@@ -33,7 +33,6 @@ final class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -56,7 +55,7 @@ final class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
 
     // declare a private int size
@@ -71,14 +70,15 @@ final class List {
     /**
      * Constructs the object.
      */
-    public List() {
+    List() {
+    	final int k = 10;
 
         // what are the two variables to be initialized here?
         // think about the private variables described above.
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        list = new int[k];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -95,22 +95,18 @@ final class List {
      * There will be some clients of the ADT that will require
      * the list to contain n elements which is known
      * at the time of creating the list.
-     * 
      * The overloaded constructor is a way to initialize a list with
      * a list capacity of n items where n is given as an argument to
      * constructor.
-     * 
      */
     /**
      * Constructs the object.
-     *
      * @param      capacity  argument is of integer type.
      */
-    public List(final int capacity) {
+    List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
-    
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -119,12 +115,10 @@ final class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
      * The method returns void (nothing)
      */
     /**
      * Function to add the elements to the list.
-     *
      * @param      item  an item which has to be added to the list.
      */
     public void add(final int item) {
@@ -144,7 +138,6 @@ final class List {
      * when the maximum capacity is reached and there is no room to add items.
      * So, how do we dynamically resize the list?
      * Java doesn't support resize of array. Here are some options.
-     *
      * Option 1
      * Create a new array of the desired size,
      * and copy the contents from the original array to the new array,
@@ -153,7 +146,6 @@ final class List {
      * Option 2
      * Use java.util.Arrays.copyOf(...) methods which returns a bigger array,
      * with the contents of the original array.
-     *
      * TODO
      * Create a method called resize(). Resize should create an new array that is
      * double the size of the old array.
