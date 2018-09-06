@@ -1,6 +1,18 @@
+/**
+ * To import BufferedInputStream
+ */
 import java.io.BufferedInputStream;
+/**
+ * To import PrintStream
+ */
 import java.io.PrintStream;
+/**
+ * To import Arrays
+ */
 import java.util.Arrays;
+/**
+ * To import Scanner
+ */
 import java.util.Scanner;
 
 /*
@@ -13,16 +25,26 @@ import java.util.Scanner;
      * Here E is a type parameter, and it will be replaced with 
         actual type when the object got created. 
      */
+        /**
+         * class named list of type generics.
+         *
+         * @param      <E>   generic type is given.
+         */
 public class List<E> {
     private E[] list;
     private int size;
-    //Constructor
+    /**
+     * Constructs the object.
+     */
     public List() {
         // Create a variable of the type Object[]
         list = ((E[])new Object[10]);//Object is the base class for all the classes
         size = 0;
     }
-    //Overloaded Constructor
+    /**
+     * Constructs the object.
+     * @param      param  The size is passed.
+     */
     public List(int param) {
         list = ((E[])new Object[param]);
         size = 0;
@@ -35,6 +57,11 @@ public class List<E> {
      * Think about how you can use the size variable to add item
      * to the list.
      */
+    /**
+     * Function to add items.
+     *
+     * @param      item  The item to be added.
+     */
     public void add(E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
@@ -43,6 +70,9 @@ public class List<E> {
         }
         list[size++] = item;
     }
+    /**
+     * function to resize.
+     */
     private void resize() {
         E[] newlist = ((E[]) new Object[2 * list.length]);
         System.arraycopy(list, 0, newlist, 0, size);
@@ -50,6 +80,11 @@ public class List<E> {
     }
     /*Inserts all the elements of specified int 
     array to the end of list*/
+    /**
+     * function to add all the items in items.
+     *
+     * @param      items  The items
+     */
     public void addAll(E[] items) {
         //Write logic for addAll method
         for (int i=0; i < items.length; i++) {
@@ -60,8 +95,12 @@ public class List<E> {
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * function to know the size
+     *
+     * @return     return type is integer.
      */
     public int size() {
         return size;
@@ -86,6 +125,11 @@ public class List<E> {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+    /**
+     * function to remove index item.
+     *
+     * @param      index  The index
+     */
     public void remove(int index) {
         //Write logic for remove method
         if(index >= 0 && index < size) {
@@ -108,6 +152,13 @@ public class List<E> {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
+     */
+    /**
+     * function to get an item in the index.
+     *
+     * @param      index  The index
+     *
+     * @return     return type is int.
      */
     public E get(int index) {
          //Write logic for get method
@@ -138,6 +189,11 @@ public class List<E> {
      * not all the elements of the array.
      *
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         if(size == 0) {
             return "[]";
@@ -156,6 +212,13 @@ public class List<E> {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**
+     * Function to know an item is present or not.
+     *
+     * @param      item  The item
+     *
+     * @return     return type is boolean.
+     */
     public boolean contains(E item) {
 		//Write logic for contains method
         for (int i = 0; i < size; i++) {
@@ -169,6 +232,13 @@ public class List<E> {
      * Returns the index of the first occurrence 
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
+     */
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     return type is int.
      */
     public int indexOf(E item) {
        //Write logic for indexOf method
