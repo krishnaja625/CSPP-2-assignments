@@ -9,13 +9,13 @@ import java.util.Scanner;
 /**
  * class named Solution is created.
  */
-public class Solution {
+class Solution {
     /**
     * Main function to do the following.
     *
     * @param      args  The arguments
     */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         StringList sl = new StringList();
         StringListInterface l = (StringListInterface)sl;//Typecasting is done for StringListInterface
@@ -33,7 +33,7 @@ public class Solution {
 	                l.add(tokens[1]);
                 break;
                 case "addAll":
-                if(tokens.length == 2){
+                if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
                 l.addAll(t1);
                 }
@@ -63,6 +63,7 @@ public class Solution {
                 case "contains":
                 System.out.println(l.contains(tokens[1]));
                 break;
+                default:
             }
         }
 	}
