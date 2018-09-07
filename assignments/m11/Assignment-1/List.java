@@ -127,6 +127,9 @@ public class List {
             list[size - 1] = 0;
             size--;
         }
+        else {
+            System.out.println("Invalid Position Exception");
+        }
     }
 
     /*
@@ -223,10 +226,10 @@ public class List {
      public void removeAll(int[] newArray)
      {
         // write the logic 
-        for (int i = 0; i < size; i++) {
+        for (int i : newArray) {
             for (int j = 0; j < newArray.length; j++) {
-                if (list[i] == newArray[j]) {
-                    remove(i);
+                if (i == list[j]) {
+                    remove(j);
                 }
             }
         }
@@ -260,14 +263,24 @@ public class List {
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(List newlist ) 
-    {
-
-    // Replace the code below
-        if (Arrays.equals(newlist.list, list)) {
-            return true;
+    public boolean equals(final List newlist) {
+        if (this.size != newlist.size) {
+            return false;
         }
-    return false;
+
+        for (int i = 0; i < this.size; i++) {
+            int count = 0;
+            for (int j = 0; j < newlist.size; j++) {
+                if (newlist.list[j] == this.list[i]) {
+                    count++;
+                }
+            }
+            if (count == 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
     /*
     * Removes all the elements from list
