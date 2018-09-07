@@ -239,9 +239,13 @@ public class List {
     {
         int y = end - start;
         List newlist = new List();
+        int j = 0;
         if (start >= 0 && end >= 0 && start < end)
         {
-            System.arraycopy(list, start, newlist, 0, y);
+            for (int i = start; i < end; i++) {
+                newlist.list[j++] = list[i];
+            }
+/*            System.arraycopy(list, start, newlist, 0, y);*/
             return newlist;
         } else {
             System.out.println("Index Out of Bounds Exception");
