@@ -171,9 +171,9 @@ public class List {
      */
     public String toString() {
         // Replace the code below
-        if (size == 0) {
+/*        if (size == 0) {
             return "[]";
-        }
+        }*/
         String str = "[";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
