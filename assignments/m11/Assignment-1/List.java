@@ -234,7 +234,6 @@ public class List {
         for (int j = 0; j < newArray.length; j++) {
             for (int i= 0; i < size; i++) {
                 if (list[i] == newArray[j]) {
-                    System.out.println(Arrays.toString(list));
                     remove(i);
                     i--;
                 }
