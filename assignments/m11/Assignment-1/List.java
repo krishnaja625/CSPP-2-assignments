@@ -235,6 +235,7 @@ public class List {
             for (int i= 0; i < size; i++) {
                 if (list[i] == newArray[j]) {
                     remove(i);
+                    i--;
                 }
             }
         }
@@ -264,11 +265,11 @@ public class List {
                     newlist.add(list[i]);
                 }
     /*            System.arraycopy(list, start, newlist, 0, y);*/
-                return newlist; 
+                return newlist;
             } else {
                     System.out.println("Index Out of Bounds Exception");
                     return null;
-        } 
+        }
     } else {
             System.out.println("Index Out of Bounds Exception");
             return null;
@@ -378,8 +379,9 @@ public class List {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         int[] a = new int[t2.length];
-                        for (int i = 0; i < t2.length; i++)
+                        for (int i = 0; i < t2.length; i++) {
                             a[i] = Integer.parseInt(t2[i]);
+                        }
                         l.removeAll(a);
                     }
                 break;
