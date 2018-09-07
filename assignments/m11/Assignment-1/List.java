@@ -120,7 +120,7 @@ public class List {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if(index >= 0 && index < size()){
-            
+
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
@@ -226,7 +226,7 @@ public class List {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < newArray.length; j++) {
                 if (list[i] == newArray[j]) {
-                    remove(list[i]);
+                    remove(i);
                 }
             }
         }
