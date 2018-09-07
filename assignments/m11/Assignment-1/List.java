@@ -237,13 +237,12 @@ public class List {
     */
     public List subList(int start, int end) 
     {
-        int y = end - start;
         List newlist = new List();
         int j = 0;
         if (start >= 0 && end >= 0 && start < end)
         {
             for (int i = start; i < end; i++) {
-                newlist.list[j++] = list[i];
+                newlist.add(list[i]);
             }
 /*            System.arraycopy(list, start, newlist, 0, y);*/
             return newlist;
