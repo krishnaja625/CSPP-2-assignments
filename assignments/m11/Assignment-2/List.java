@@ -136,7 +136,7 @@ public class List<E> {
             for(int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
-            list[size] = null;
+            list[size - 1] = null;
             size--;
         } else {
             System.out.println("Invalid Position Exception");
@@ -271,9 +271,17 @@ public class List<E> {
      indicates the startIndex and the second parameter
      indicates the endIndex.
      */
+     /**
+      * function to get sublist.
+      *
+      * @param      n     start index.
+      * @param      n2    end index.
+      *
+      * @return     return type is list.
+      */
     public List subList(int n, int n2) {
         if (n <= size - 1 && n2 <= size && n != n2) {
-            List newlist = new List();
+            List<E> newlist = new List();
             int j = 0;
             if (n >= 0 && n2 >= 0 && n < n2) {
                 for (int i = n; i < n2; i++) {
