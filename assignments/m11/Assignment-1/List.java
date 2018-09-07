@@ -70,7 +70,7 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        final int k = 10;
+        final int k = 30;
         list = new int[k];
         size = 0;
 
