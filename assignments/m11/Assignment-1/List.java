@@ -256,15 +256,20 @@ public class List {
      * @return     return type is list.
      */
     public List subList(int start, int end)  {
-        List newlist = new List();
-        int j = 0;
-        if (start >= 0 && end >= 0 && start < end) {
-            for (int i = start; i < end; i++) {
-                newlist.add(list[i]);
-            }
-/*            System.arraycopy(list, start, newlist, 0, y);*/
-            return newlist;
-        } else {
+        if (start <= size - 1 && end <= size - 1) {
+            List newlist = new List();
+            int j = 0;
+            if (start >= 0 && end >= 0 && start < end) {
+                for (int i = start; i < end; i++) {
+                    newlist.add(list[i]);
+                }
+    /*            System.arraycopy(list, start, newlist, 0, y);*/
+                return newlist; 
+            } else {
+                    System.out.println("Index Out of Bounds Exception");
+                    return null;
+        } 
+    } else {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
