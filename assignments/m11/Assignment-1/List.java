@@ -127,9 +127,9 @@ public class List {
             list[size - 1] = 0;
             size--;
         }
-        else {
+/*        else {
             System.out.println("Invalid Position Exception");
-        }
+        }*/
     }
 
     /*
@@ -264,14 +264,13 @@ public class List {
     exactly matching with the given list or not.
     */
     public boolean equals(final List newlist) {
-        if (this.size != newlist.size) {
+        if (size != newlist.size) {
             return false;
         }
-
-        for (int i = 0; i < this.size; i++) {
+        for (int i = 0; i < size; i++) {
             int count = 0;
             for (int j = 0; j < newlist.size; j++) {
-                if (newlist.list[j] == this.list[i]) {
+                if (newlist.list[j] == list[i]) {
                     count++;
                 }
             }
@@ -279,7 +278,6 @@ public class List {
                 return false;
             }
         }
-
         return true;
     }
     /*
