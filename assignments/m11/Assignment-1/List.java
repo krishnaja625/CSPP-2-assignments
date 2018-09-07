@@ -223,11 +223,16 @@ public class List {
      public void removeAll(int[] newArray)
      {
         // write the logic 
-        for (int i = 0; i < list.length; i++) {
+        int k;
+        for (int i = 0; i < size; i++) {
             for (int j = 0; j < newArray.length; j++) {
-                if (list[i] == newArray[j]) {
-                    remove(i);
+                k = indexOf(newArray[j]);
+                if (k >= 0 && k < size) {
+                    remove(k);
                 }
+
+/*                if (list[i] == newArray[j]) {
+                    remove(i);*/
             }
         }
 
