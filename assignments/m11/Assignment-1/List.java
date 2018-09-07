@@ -256,7 +256,7 @@ public class List {
      * @return     return type is list.
      */
     public List subList(int start, int end)  {
-        if (start <= size - 1 && end <= size - 1) {
+        if (start <= size - 1 && end <= size) {
             List newlist = new List();
             int j = 0;
             if (start >= 0 && end >= 0 && start < end) {
