@@ -246,7 +246,7 @@ public class List {
     {
         List newlist = new List();
         int j = 0;
-        if (start >= 0 && end >= 0 && start < end)
+        if (start >= 0 && end >= 0 && start <= end)
         {
             for (int i = start; i < end; i++) {
                 newlist.add(list[i]);
