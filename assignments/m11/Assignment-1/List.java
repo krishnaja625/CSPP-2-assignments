@@ -239,7 +239,7 @@ public class List {
                 }
             }
         }
-        System.out.println(toString());
+        System.out.println(Arrays.toString(list));
      }
     /*
     Returns a list object containing elements, including startIndex and
