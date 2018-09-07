@@ -97,6 +97,11 @@ public class List {
      * The method returns an int. Empty list should return 0.
      *
      */
+    /**
+     * function to return size.
+     *
+     * @return     return type is integer.
+     */
     public int size() {
         // replace the code below to implement the size method
         return size;
@@ -116,7 +121,12 @@ public class List {
      * [1,3,0,0,0,0,0,0,0,0] The method returns void (nothing)
      *
      */
-    public void remove(int index) {
+    /**
+     * Function to remove item at index.
+     *
+     * @param      index  The index
+     */
+    public void remove(final int index) {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if(index >= 0 && index < size()){
@@ -141,7 +151,14 @@ public class List {
      * exist. How do we check if the position is greater than the number of
      * items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    /**
+     * function to get the item at index.
+     *
+     * @param      index  The index
+     *
+     * @return     return type is integer.
+     */
+    public int get(final int index) {
         // Replace the code below to write the code for get
 /*        for (int i = 0; i < size; i++) {
             if (list[i] == list[index]) {
@@ -169,6 +186,11 @@ public class List {
      * Example: [1,2,3,0,0,0,0,0,0,0] toString should only return the items in
      * the list and not all the elements of the array.
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     return type is String
+     */
     public String toString() {
         // Replace the code below
         if (size == 0) {
@@ -181,13 +203,18 @@ public class List {
         }
         str = str + list[i] + "]";
         return str;
-    } 
+    }
     /*
      * Contains return true if the list has the item passed as an argument to
      * the method So, iterate through the list and return true if the item
      * exists and otherwise false
      */
-    public boolean contains(int item) {
+    /**
+     * Function tells whether item is present or not.
+     * @param      item  The item
+     * @return     return type is boolean.
+     */
+    public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
@@ -200,7 +227,14 @@ public class List {
      * Returns the index of the first occurrence of the specified element in
      * this list, or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+     /**
+      * Searches for the first match.
+      *
+      * @param      item  The item
+      *
+      * @return     return type is integer.
+      */
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
@@ -212,8 +246,11 @@ public class List {
     /*
     Inserts all the elements of specified int array to the end of list    
     */
-    public void addAll(int[] newArray)
-    {
+    /**
+     * Adds all the new array elements.
+     * @param      newArray  The new array
+     */
+    public void addAll(final int[] newArray) {
         // write the logic
         for (int i = 0; i < newArray.length; i++) {
             add(newArray[i]);
@@ -229,7 +266,7 @@ public class List {
       * @param      newArray  The new array
       */
      public void removeAll(final int[] newArray) {
-        // write the logic  
+        // write the logic
         for (int j = 0; j < newArray.length; j++) {
             for (int i = 0; i < size; i++) {
                 if (list[i] == newArray[j]) {
