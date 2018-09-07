@@ -124,7 +124,7 @@ public class List {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
-            list[size] = 0;
+            list[size - 1] = 0;
             size--;
         }
     }
@@ -223,16 +223,11 @@ public class List {
      public void removeAll(int[] newArray)
      {
         // write the logic 
-        int k;
-        for (int i = 0; i < list.length; i++) {
+        for (int i = 0; i < size; i++) {
             for (int j = 0; j < newArray.length; j++) {
-                k = indexOf(newArray[j]);
-                if (k >= 0 && k < size) {
-                    remove(k);
+                if (list[i] == newArray[j]) {
+                    remove(i);
                 }
-
-/*                if (list[i] == newArray[j]) {
-                    remove(i);*/
             }
         }
 
