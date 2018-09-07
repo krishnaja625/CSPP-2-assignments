@@ -59,13 +59,14 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     */
+    /**
+     * Private variable of integer.
      */
     private int size;
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-
     /*
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
@@ -89,7 +90,6 @@ public class List {
         size = 0;
 
     }
-    
     /*
      * The add method does what the name suggests. Add an int item to the list.
      * The assumption is to store the item at the end of the list What is the
@@ -312,7 +312,7 @@ public class List {
      * @return     return type is list.
      */
     public List subList(final int start, final int end)  {
-        if (start <= size - 1 && end <= size && start != end) {
+        if (start <= size && end <= size && start != end) {
             List newlist = new List();
             int j = 0;
             if (start >= 0 && end >= 0 && start < end) {
