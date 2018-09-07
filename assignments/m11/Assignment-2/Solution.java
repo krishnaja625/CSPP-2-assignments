@@ -1,4 +1,10 @@
+/**
+ * To import BufferedInputStream
+ */
 import java.io.BufferedInputStream;
+/**
+ * To import Scanner
+ */
 import java.util.Scanner;
 /**
  * Class for student.
@@ -10,14 +16,14 @@ class Student {
     private String name;
     /**
      * Constructs the object.
-     * @param      n     { parameter_description }
+     * @param      n     return type is string.
      */
     Student(final String n) {
         name = n;
     }
     /**
      * Gets the name.
-     * @return     The name.
+     * @return     return type is string.
      */
     public String getName() {
         return name;
@@ -25,7 +31,7 @@ class Student {
     /**
      * equals method.
      * @param      other  The other
-     * @return     { description_of_the_return_value }
+     * @return     return type is string.
      */
     @Override
     public boolean equals(final Object other) {
@@ -574,6 +580,7 @@ public final class Solution {
         }
     }
 }
+
 
 
 
