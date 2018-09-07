@@ -231,10 +231,10 @@ public class List {
      public void removeAll(int[] newArray)
      {
         // write the logic 
-        for (int i : newArray) {
+        for (int i= 0; i < size; i++) {
             for (int j = 0; j < newArray.length; j++) {
-                if (i == list[j]) {
-                    remove(j);
+                if (list[i] == newArray[j]) {
+                    remove(i);
                 }
             }
         }
@@ -282,21 +282,7 @@ public class List {
      * @return     returns boolean type.
      */
     public boolean equals(final List newlist) {
-        if (size != newlist.size) {
-            return false;
-        }
-        for (int i = 0; i < size; i++) {
-            int count = 0;
-            for (int j = 0; j < newlist.size; j++) {
-                if (newlist.list[j] == list[i]) {
-                    count++;
-                }
-            }
-            if (count == 0) {
-                return false;
-            }
-        }
-        return true;
+        return Arrays.equals(newlist.list, list);
     }
     /*
     * Removes all the elements from list
