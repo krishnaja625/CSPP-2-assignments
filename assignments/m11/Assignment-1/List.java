@@ -1,7 +1,18 @@
+/**
+ * To import BufferedInputStream
+ */
 import java.io.BufferedInputStream;
+/**
+ * To import Scanner
+ */
 import java.util.Scanner;
+/**
+ * To import Arrays
+ */
 import java.util.Arrays;
-
+/**
+ * Class named list is created.
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -59,6 +70,9 @@ public class List {
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
      */
+    /**
+     * Constructs the object.
+     */
     public List() {
 
         // what are the two variables to be initialized here? think about the
@@ -84,7 +98,12 @@ public class List {
      *
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    /**
+     * function to add the items.
+     *
+     * @param      item  The item
+     */
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         list[size++] = item;
 
@@ -129,7 +148,7 @@ public class List {
     public void remove(final int index) {
         // write the logic for remove here. Think about what to do to the size
         // variable.
-        if(index >= 0 && index < size()){
+        if (index >= 0 && index < size()) {
 
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
@@ -244,7 +263,7 @@ public class List {
     return -1;
     }
     /*
-    Inserts all the elements of specified int array to the end of list    
+    Inserts all the elements of specified int array to the end of list
     */
     /**
      * Adds all the new array elements.
