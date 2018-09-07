@@ -224,7 +224,7 @@ public class List {
      {
         // write the logic 
         int k;
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < list.length; i++) {
             for (int j = 0; j < newArray.length; j++) {
                 k = indexOf(newArray[j]);
                 if (k >= 0 && k < size) {
