@@ -273,7 +273,11 @@ public class List {
     public void clear()
     {
     // write the logic for clear.
-        removeAll(list);
+        int[] arr = new int[size];
+        for (int i = 0; i< size; i++) {
+            arr[i] = list[i];
+        }
+        removeAll(arr);
 
     }
 
