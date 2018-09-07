@@ -223,6 +223,11 @@ public class List {
      Removes all of its elements that are contained in the specified int 
      array.    
     */
+     /**
+      * Removes all the elements in.
+      *
+      * @param      newArray  The new array
+      */
      public void removeAll(int[] newArray)
      {
         // write the logic 
@@ -242,12 +247,18 @@ public class List {
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
-    public List subList(int start, int end) 
-    {
+    /**
+     * Function to print the sublist.
+     *
+     * @param      start  The start
+     * @param      end    The end
+     *
+     * @return     return type is list.
+     */
+    public List subList(int start, int end)  {
         List newlist = new List();
         int j = 0;
-        if (start >= 0 && end >= 0 && start <= end)
-        {
+        if (start >= 0 && end >= 0 && start <= end) {
             for (int i = start; i < end; i++) {
                 newlist.add(list[i]);
             }
@@ -263,6 +274,13 @@ public class List {
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
+    /**
+     * Function to check whether elements are equal or not.
+     *
+     * @param      newlist  The newlist of list type is created.
+     *
+     * @return     returns boolean type.
+     */
     public boolean equals(final List newlist) {
         if (size != newlist.size) {
             return false;
@@ -285,19 +303,26 @@ public class List {
     * Think about this case and make the method
     * the simpler.
     */
-    public void clear()
-    {
+    /**
+     * Function to clear the elements.
+     */
+    public void clear() {
     // write the logic for clear.
         int[] arr = new int[size];
-        for (int i = 0; i< size; i++) {
+        for (int i = 0; i < size; i++) {
             arr[i] = list[i];
         }
         removeAll(arr);
 /*        removeAll(list);*/
 
     }
+    /**
+     * Main function to do the process.
+     *
+     * @param      args  The arguments are of string.
+     */
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -312,7 +337,7 @@ public class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                    if (tokens.length == 2){
+                    if (tokens.length == 2) {
                         String[] t = tokens[1].split(",");
                         if (t.length == 1) {
                             l.add(Integer.parseInt(tokens[1]));
@@ -352,8 +377,8 @@ public class List {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         int[] temp = new int[t1.length];
-                        for(int i = 0; i < temp.length; i++) {
-                            temp[i]=Integer.parseInt(t1[i]);
+                        for (int i = 0; i < temp.length; i++) {
+                            temp[i] = Integer.parseInt(t1[i]);
                         }
                         l.addAll(temp);
                     }
@@ -362,7 +387,7 @@ public class List {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         int[] a = new int[t2.length];
-                        for(int i = 0; i < t2.length; i++)
+                        for (int i = 0; i < t2.length; i++)
                             a[i] = Integer.parseInt(t2[i]);
                         l.removeAll(a);
                     }
