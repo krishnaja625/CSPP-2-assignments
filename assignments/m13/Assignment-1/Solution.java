@@ -84,8 +84,16 @@ class Set {
 
     }
     public Set retainAll(int[] newArray) {
-    	return null;
-
+    	Set newset3 = new Set();
+    	int a;
+    	for (a = 0; a < size(); a++) {
+    		for (int j = 0; j < newArray.length; j++) {
+    			if (this.set[a] == newArray[j]) {
+    				newset3.add(this.set[a]);
+    			}
+    		}
+    	}
+    	return newset3;
     }
     public int[][] cartesianProduct(Set newset2) {
     	int[][] a = new int[10][10];
