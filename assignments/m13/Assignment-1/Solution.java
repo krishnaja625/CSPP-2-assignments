@@ -108,7 +108,7 @@ class Set {
     	{
     		return null;
     	}
-    	int rows = this.size()+newset2.size();
+    	int rows = this.size()*newset2.size();
     	int[][] a = new int[rows][2];
     	Set newset4 = new Set();
     	for (int i = 0; i < size(); i++) {
