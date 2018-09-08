@@ -109,15 +109,13 @@ class Set {
     	for (int i = 0; i < size(); i++) {
     		for (int j = 0; j < rows; j++) {
     			for (int k = 0; k < newset2.size(); k++) {
-    			a[j][0] = this.set[i++];
+    			a[j][0] = this.set[i];
     			a[j][1] = newset2.set[k];
     			}
-
     		}
     	}
     	return a;
     }
-
 }
 /**
  * Solution class for code-eval.
