@@ -1,3 +1,6 @@
+/**
+ * To import BufferedInputStream
+ */
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
@@ -5,6 +8,9 @@ import java.util.Arrays;
 /**
  * Class for set.
  * @author : krishnaja makineni
+ */
+/**
+ * Class for set.
  */
 class Set {
     //your code goes here...
@@ -16,8 +22,14 @@ class Set {
         set = new int[k];
         size = 0;
     }
+    /**
+     * function to say whether the item is present or not.
+     *
+     * @param      item  The item
+     *
+     * @return     return type is boolean.
+     */
     public boolean contains(int item) {
-        // Replace the code below
         for (int i = 0; i < size; i++) {
             if (set[i] == item) {
                 return true;
@@ -28,6 +40,11 @@ class Set {
     public int size() {
         return size;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     return type is string.
+     */
     public String toString() {
         if (size == 0) {
             return "{}";
@@ -40,7 +57,11 @@ class Set {
         str = str + set[i] + "}";
         return str;
     }
-    public void add(int item) {
+    /**
+     * function to add items if the item is not present.
+     * @param      item  The item
+     */
+    public void add(final int item) {
 /*    	for(int i = 0; i < size; i++) {
     		if (set[i] != item) {
     			c++;
@@ -55,21 +76,34 @@ class Set {
 		    }
 		}
     }
-
+    /**
+     * Function to resize the set if items exceed the existing size.
+     */
     private void resize() {
         int[] newset = new int[2 * set.length];
         System.arraycopy(set, 0, newset, 0, set.length);
         set = newset;
     }
-    public void add(int[] newArray) {
-
+    /**
+     * function to add an array of items to the set.
+     *
+     * @param      newArray  The new array of items to be passed.
+     */
+    public void add(final int[] newArray) {
     	for (int i = 0; i < newArray.length; i++) {
     		if (!contains(newArray[i])) {
             add(newArray[i]);
 	        }
 	    }
     }
-    public Set intersection(Set newset1) {
+    /**
+     * Function to give intersection of elements.
+     * @param      newset1  newset1 is created
+     *  of set datatype and is passed as argument.
+     *
+     * @return     return type is set.
+     */
+    public Set intersection(final Set newset1) {
 
     	Set newset3 = new Set();
     	for (int i = 0; i < size(); i++) {
@@ -82,7 +116,14 @@ class Set {
     	return newset3;
 
     }
-    public Set retainAll(int[] newArray) {
+    /**
+     * Function to retain all elements in given array.
+     *
+     * @param      newArray  The new array
+     *
+     * @return     return type is set.
+     */
+    public Set retainAll(final int[] newArray) {
     	Set newset3 = new Set();
     	for (int i = 0; i < size(); i++) {
     		for (int j = 0; j < newArray.length; j++) {
@@ -93,21 +134,14 @@ class Set {
     	}
     	return newset3;
     }
-    public void remove(final int index) {
-        if (index >= 0 && index < size()) {
-
-            for (int i = index; i < size - 1; i++) {
-                set[i] = set[i + 1];
-            }
-            set[size - 1] = 0;
-            size--;
-        }
-    }
-    public int[][] cartesianProduct(Set newset2) {
-    	if (this.set.length == 0 && newset2.set.length == 0)
-    	{
-    		return null;
-    	}
+    /**
+     * Function to find the cartesian product.
+     *
+     * @param      newset2  A set is passed to find cartesian product.
+     *
+     * @return     return type is a 2-D array.
+     */
+    public int[][] cartesianProduct(final Set newset2) {
     	int rows = this.size() * newset2.size();
     	int[][] a = new int[rows][2];
     	Set newset4 = new Set();
@@ -217,7 +251,8 @@ public final class Solution {
                 if (s.cartesianProduct(t).length == 0) {
                 	System.out.println("null");
                 } else {
-                	System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+                	System.out.println(Arrays.deepToString
+                		(s.cartesianProduct(t)));
                 }
                 break;
                 default:
