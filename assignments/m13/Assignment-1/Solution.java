@@ -115,7 +115,7 @@ class Set {
     		int k = 0;
     		for (int j = 0; j < rows; j++) {
     			a[j][0] = this.set[i];
-    			a[j][1] = newset2.set[j];
+    			a[j][1] = newset2.set[k];
     			k++;   
     		}
     	}
