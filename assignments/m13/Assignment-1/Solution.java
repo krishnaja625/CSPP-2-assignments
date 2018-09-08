@@ -261,7 +261,7 @@ public final class Solution {
                 s.add(intArray);
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
-                if (s.cartesianProduct(t).length == 0) {
+                if (intArray.length == 0) {
                     System.out.println("null");
                 } else {
                     System.out.println(Arrays.deepToString(
