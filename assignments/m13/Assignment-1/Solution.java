@@ -15,9 +15,18 @@ import java.util.Arrays;
 class Set {
     //your code goes here...
     //Good luck :-)
+    /**
+     * A private variable of name set and of integer array type is created.
+     */
     private int[] set;
+    /**
+     * A private variable size of integer type is created.
+     */
     private int size;
-    public Set() {
+    /**
+     * Constructs the object.
+     */
+    Set() {
         final int k = 30;
         set = new int[k];
         size = 0;
@@ -29,7 +38,7 @@ class Set {
      *
      * @return     return type is boolean.
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         for (int i = 0; i < size; i++) {
             if (set[i] == item) {
                 return true;
@@ -37,6 +46,11 @@ class Set {
         }
         return false;
     }
+    /**
+     * Function to return size os a set.
+     *
+     * @return     return type is integer.
+     */
     public int size() {
         return size;
     }
@@ -62,19 +76,19 @@ class Set {
      * @param      item  The item
      */
     public void add(final int item) {
-/*    	for(int i = 0; i < size; i++) {
-    		if (set[i] != item) {
-    			c++;
-    		}
-    	}*/
-    	if (!contains(item)) {
-		    if (size == set.length) {
-		        resize();
-		        add(item);
-		    } else {
-		        set[size++] = item;
-		    }
-		}
+/*      for(int i = 0; i < size; i++) {
+            if (set[i] != item) {
+                c++;
+            }
+        }*/
+        if (!contains(item)) {
+            if (size == set.length) {
+                resize();
+                add(item);
+            } else {
+                set[size++] = item;
+            }
+        }
     }
     /**
      * Function to resize the set if items exceed the existing size.
@@ -90,11 +104,11 @@ class Set {
      * @param      newArray  The new array of items to be passed.
      */
     public void add(final int[] newArray) {
-    	for (int i = 0; i < newArray.length; i++) {
-    		if (!contains(newArray[i])) {
+        for (int i = 0; i < newArray.length; i++) {
+            if (!contains(newArray[i])) {
             add(newArray[i]);
-	        }
-	    }
+            }
+        }
     }
     /**
      * Function to give intersection of elements.
@@ -105,15 +119,15 @@ class Set {
      */
     public Set intersection(final Set newset1) {
 
-    	Set newset3 = new Set();
-    	for (int i = 0; i < size(); i++) {
-    		for (int j = 0; j < newset1.size(); j++) {
-    			if (this.set[i] == newset1.set[j]) {
-    				newset3.add(this.set[i]);
-    			}
-    		}
-    	}
-    	return newset3;
+        Set newset3 = new Set();
+        for (int i = 0; i < size(); i++) {
+            for (int j = 0; j < newset1.size(); j++) {
+                if (this.set[i] == newset1.set[j]) {
+                    newset3.add(this.set[i]);
+                }
+            }
+        }
+        return newset3;
 
     }
     /**
@@ -124,15 +138,15 @@ class Set {
      * @return     return type is set.
      */
     public Set retainAll(final int[] newArray) {
-    	Set newset3 = new Set();
-    	for (int i = 0; i < size(); i++) {
-    		for (int j = 0; j < newArray.length; j++) {
-    			if (this.set[i] == newArray[j]) {
-    				newset3.add(this.set[i]);
-    			}
-    		}
-    	}
-    	return newset3;
+        Set newset3 = new Set();
+        for (int i = 0; i < size(); i++) {
+            for (int j = 0; j < newArray.length; j++) {
+                if (this.set[i] == newArray[j]) {
+                    newset3.add(this.set[i]);
+                }
+            }
+        }
+        return newset3;
     }
     /**
      * Function to find the cartesian product.
@@ -142,22 +156,21 @@ class Set {
      * @return     return type is a 2-D array.
      */
     public int[][] cartesianProduct(final Set newset2) {
-    	int rows = this.size() * newset2.size();
-    	int[][] a = new int[rows][2];
-    	Set newset4 = new Set();
-    	for (int i = 0; i < size(); i++) {
-    		int k = 0;
-    		for (int j = 0; j < rows; j++) {
-    			a[j][0] = this.set[i];
-    			a[j][1] = newset2.set[k];
-    			k++;
-    			if (k == newset2.size()) {
-    				k = 0;
-    				i++;
-    			}
-    		}
-    	}
-    	return a;
+        int rows = this.size() * newset2.size();
+        int[][] a = new int[rows][2];
+        for (int i = 0; i < size(); i++) {
+            int k = 0;
+            for (int j = 0; j < rows; j++) {
+                a[j][0] = this.set[i];
+                a[j][1] = newset2.set[k];
+                k++;
+                if (k == newset2.size()) {
+                    k = 0;
+                    i++;
+                }
+            }
+        }
+        return a;
     }
 
 }
@@ -249,10 +262,10 @@ public final class Solution {
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
                 if (s.cartesianProduct(t).length == 0) {
-                	System.out.println("null");
+                    System.out.println("null");
                 } else {
-                	System.out.println(Arrays.deepToString
-                		(s.cartesianProduct(t)));
+                    System.out.println(Arrays.deepToString(
+                        s.cartesianProduct(t)));
                 }
                 break;
                 default:
