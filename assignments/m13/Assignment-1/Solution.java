@@ -72,11 +72,10 @@ class Set {
     public Set intersection(Set newset1) {
 
     	Set newset3 = new Set();
-    	int a;
-    	for (a = 0; a < size(); a++) {
+    	for (int i = 0; i < size(); i++) {
     		for (int j = 0; j < newset1.size(); j++) {
-    			if (this.set[a] == newset1.set[j]) {
-    				newset3.add(this.set[a]);
+    			if (this.set[i] == newset1.set[j]) {
+    				newset3.add(this.set[i]);
     			}
     		}
     	}
@@ -85,20 +84,33 @@ class Set {
     }
     public Set retainAll(int[] newArray) {
     	Set newset3 = new Set();
-    	int a;
-    	for (a = 0; a < size(); a++) {
+    	for (int i = 0; i < size(); i++) {
     		for (int j = 0; j < newArray.length; j++) {
-    			if (this.set[a] == newArray[j]) {
-    				newset3.add(this.set[a]);
+    			if (this.set[i] == newArray[j]) {
+    				newset3.add(this.set[i]);
     			}
     		}
     	}
     	return newset3;
     }
-    public int[][] cartesianProduct(Set newset2) {
-    	int[][] a = new int[10][10];
-    	return a;
+    public void remove(final int index) {
+        if (index >= 0 && index < size()) {
 
+            for (int i = index; i < size - 1; i++) {
+                set[i] = set[i + 1];
+            }
+            set[size - 1] = 0;
+            size--;
+        }
+    }
+    public int[][] cartesianProduct(Set newset2) {
+    	if (this.set.length == 0 && newset2.set.length == 0)
+    	{
+    		return null;
+    	}
+    	int[][] a = new int[2][2];
+
+    	return a;
     }
 
 }
