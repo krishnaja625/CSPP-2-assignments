@@ -76,7 +76,7 @@ class Set {
     	for (a = 0; a < size(); a++) {
     		for (int j = 0; j < newset1.size(); j++) {
     			if (this.set[a] == newset1.set[j]) {
-    				newset3.add(this.set[j]);
+    				newset3.add(this.set[a]);
     			}
     		}
     	}
