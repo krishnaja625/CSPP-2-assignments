@@ -104,7 +104,7 @@ class Set {
         }
     }
     public int[][] cartesianProduct(Set newset2) {
-    	int rows = this.size() * newset2.size();
+    	int rows = this.size()*newset2.size();
     	int[][] a = new int[rows][2];
     	for (int i = 0; i < size(); i++) {
     		for (int j = 0; j < rows; j++) {
@@ -116,6 +116,7 @@ class Set {
     	}
     	return a;
     }
+
 }
 /**
  * Solution class for code-eval.
