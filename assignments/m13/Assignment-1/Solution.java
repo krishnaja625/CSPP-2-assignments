@@ -73,7 +73,7 @@ class Set {
 
     	Set newset3 = new Set();
     	int a;
-    	for (a = 0; a < size(); a++); {
+    	for (a = 0; a < size(); a++) {
     		for (int j = 0; j < newset1.size(); j++) {
     			if (this.set[a] == newset1.set[j]) {
     				newset3.add(this.set[j]);
