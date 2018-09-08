@@ -72,9 +72,10 @@ class Set {
     public Set intersection(Set newset1) {
 
     	Set newset3 = new Set();
-    	for (int i = 0; i < newset1.size(); i++); {
-    		for (int j = 0; j < size(); j++) {
-    			if (this.set[j] == newset1.set[j]) {
+    	int a;
+    	for (a = 0; a < size(); a++); {
+    		for (int j = 0; j < newset1.size(); j++) {
+    			if (this.set[a] == newset1.set[j]) {
     				newset3.add(this.set[j]);
     			}
     		}
