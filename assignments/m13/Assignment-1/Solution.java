@@ -262,7 +262,7 @@ public final class Solution {
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
                 if (intArray(tokens[1]).length == 0
-                    || intArray(tokens[2]).length == 0) {
+                    && intArray(tokens[2]).length == 0) {
                     System.out.println("null");
                 } else {
                     System.out.println(Arrays.deepToString(
