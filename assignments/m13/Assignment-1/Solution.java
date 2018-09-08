@@ -116,7 +116,10 @@ class Set {
     		for (int j = 0; j < rows; j++) {
     			a[j][0] = this.set[i];
     			a[j][1] = newset2.set[k];
-    			k++;   
+    			k++;
+    			if (k == newset2.size()) {
+    				k = 0;
+    			}
     		}
     	}
     	return a;
