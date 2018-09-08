@@ -104,10 +104,10 @@ class Set {
         }
     }
     public int[][] cartesianProduct(Set newset2) {
-    	int rows = this.size()*newset2.size();
+    	int rows = this.size() * newset2.size();
     	int[][] a = new int[rows][2];
-    	for (int i = 0; i < size(); i++) {
-    		for (int j = 0; j < rows; j++) {
+    	for (int j = 0; j < rows; j++) { 
+    		for (int i = 0; i < size(); i++) {
     			for (int k = 0; k < newset2.size(); k++) {
     			a[j][0] = this.set[i];
     			a[j][1] = newset2.set[k];
