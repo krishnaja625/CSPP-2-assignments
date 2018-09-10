@@ -2,201 +2,178 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 
-/**
- * Class for set.
- * @author : krishnaja makineni
- */
-/**
- * Class for set.
- */
-class Set {
-    //your code goes here...
-    //Good luck :-)
+public class Set {
+
     /**
-     * A private variable of name set and of integer array type is created.
+     * This constant is used to create an array
+     * with the initial capacity.
      */
-    private int[] set;
+    public static final int TEN = 10;
+
     /**
-     * A private variable size of integer type is created.
+     * holds the elemtns in this Set array.
      */
-    private int size;
+    public int[] set;
+
     /**
-     * Constructs the object.
+     * indicates the number of elememnts of this set.
      */
-    Set() {
-        final int k = 30;
-        set = new int[k];
+    public int size;
+
+    /**
+     * Default constructor to create an array with the szie 10.
+     */
+    public Set() {
+        set = new int[TEN];
         size = 0;
     }
+
     /**
-     * function to say whether the item is present or not.
-     *
-     * @param      item  The item
-     *
-     * @return     return type is boolean.
+     * add the item to this set at the last.
+     * If the set is full, resize the set to double
+     * the size of the current set.
+     * @param item to be inserted at the last.
      */
-    public boolean contains(final int item) {
-        for (int i = 0; i < size; i++) {
-            if (set[i] == item) {
-                return true;
+    public void add(int item) {
+        if (size == set.length) {
+            resize();
+        }
+        if (!contains(item)) {
+            set[size++] = item;
+        }
+    }
+    public void setSize(int x) {
+        size = x;
+    }
+
+    /**
+     * resize the set by double, when it is full.
+     */
+    protected void resize() {
+        set = java.util.Arrays.copyOf(set, size * 2);
+    }
+
+    /**
+     * add all elements of the array to this Set.
+     * @param arr as an arr to be added in this set,
+     *            if the element is not present in this set.
+     */
+    public void add(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            add(arr[i]);
+        }
+    }
+
+    /**
+     * Finds the intersection of the two sets.
+     * @param  other as set 2.
+     * @return the result that contains the common
+     * elements of the two sets.
+     */
+    public Set intersection(Set other) {
+        Set result = new Set();
+        for (int i = 0; i < this.size; i++) {
+            if (other.contains(this.get(i))) {
+                result.add(this.get(i));
             }
         }
-        return false;
+        return result;
     }
+
     /**
-     * Function to return size os a set.
-     *
-     * @return     return type is integer.
+     * retains all the elements from the set.
+     * @param  arr is a form of set2.
+     * @return the set that contains all the elements
+     * of this set.
+     */
+    public Set retainAll(final int[] arr) {
+        Set other = new Set();
+        for (int item : arr) {
+            other.add(item);
+        }
+        return intersection(other);
+    }
+
+    /**
+     * This finds out the cartesian product of two sets.
+     * @param  other as a Set 2.
+     * @return the cartesian product in the form of 2D array.
+     */
+    public int[][] cartesianProduct(final Set other) {
+        int [][] result = new int[this.size() * other.size()][2];
+        int k = -1;
+        if (this.size() == 0 || other.size() == 0) {
+            return null;
+        }
+        for (int i = 0; i < this.size(); i++) {
+            for (int j = 0; j < other.size(); j++) {
+                result[++k][0] = this.get(i);
+                result[k][1] = other.get(j);
+            }
+        }
+        return result;
+    }
+
+    /**
+     * This methods finds out the number of elements in the set.
+     * @return the integer value indicates the number of elements.
      */
     public int size() {
         return size;
     }
+
     /**
-     * Returns a string representation of the object.
-     *
-     * @return     return type is string.
+     * This method finds out the elements
+     * at a particular index.
+     * @param  index to return the element at this index.
+     * @return the element at this index, otherwise return -1.
+     */
+    public int get(final int index) {
+        if (index < 0 || index >= this.size()) {
+            return -1;
+        } else {
+            return set[index];
+        }
+    }
+
+    /**
+     * String version of the object.
+     * @return string.
      */
     public String toString() {
-        if (size == 0) {
+        if (this.size() == 0) {
             return "{}";
         }
-        String str = "{";
-        int i = 0;
-        for (i = 0; i < size - 1; i++) {
-            str = str + set[i] + ", ";
+        StringBuilder sb = new StringBuilder("{");
+        for (int i = 0; i < size - 1; i++) {
+            sb.append(set[i] + ", ");
         }
-        str = str + set[i] + "}";
-        return str;
-    }
-    /**
-     * function to add items if the item is not present.
-     * @param      item  The item
-     */
-    public void add(final int item) {
-/*      for(int i = 0; i < size; i++) {
-            if (set[i] != item) {
-                c++;
-            }
-        }*/
-        if (!contains(item)) {
-            if (size == set.length) {
-                resize();
-                add(item);
-            } else {
-                set[size++] = item;
-            }
-        }
-    }
-    /**
-     * Function to resize the set if items exceed the existing size.
-     */
-    public void resize() {
-        int[] newset = new int[2 * set.length];
-        System.arraycopy(set, 0, newset, 0, set.length);
-        set = newset;
-    }
-    /**
-     * function to add an array of items to the set.
-     *
-     * @param      newArray  The new array of items to be passed.
-     */
-    public void add(final int[] newArray) {
-        for (int i = 0; i < newArray.length; i++) {
-            if (!contains(newArray[i])) {
-            add(newArray[i]);
-            }
-        }
-    }
-    
-    public int getarraylength() {
-        return this.set.length;
-    }
-
-    public int get(int index) {
-        if (index < 0 || index > this.size) {
-            return -1;
-        }
-        return this.set[index];
-    }
-
-    public void arraysetter(int value,int index) {
-        this.set[index] = value;
-    }
-
-    public void sizeinc() {
-        this.size++;
-    }
-
-    public int[] getArray() {
-        return Arrays.copyOf(this.set,this.size);
+        sb.append(set[size - 1] + "}");
+        return sb.toString();
     }
 
     /**
-     * Function to give intersection of elements.
-     * @param      newset1  newset1 is created
-     *  of set datatype and is passed as argument.
-     *
-     * @return     return type is set.
+     * returns true if this set contains the item.
+     * @param  item as a parameter to be checked in the set.
+     * @return      true if the item present in the set,
+     *                   otherwise false.
      */
-    public Set intersection(final Set newset1) {
-
-        Set newset3 = new Set();
-        for (int i = 0; i < size(); i++) {
-            for (int j = 0; j < newset1.size(); j++) {
-                if (this.set[i] == newset1.set[j]) {
-                    newset3.add(this.set[i]);
-                }
-            }
-        }
-        return newset3;
-
+    public boolean contains(final int item) {
+        return indexOf(item) != -1;
     }
-
-    
-
-
 
     /**
-     * Function to retain all elements in given array.
-     *
-     * @param      newArray  The new array
-     *
-     * @return     return type is set.
+     * Finds the index of the item in this set.
+     * @param  item to be find in this set.
+     * @return the index if the item is found in this set,
+     * otherwise false.
      */
-    public Set retainAll(final int[] newArray) {
-        Set newset3 = new Set();
-        for (int i = 0; i < size(); i++) {
-            for (int j = 0; j < newArray.length; j++) {
-                if (this.set[i] == newArray[j]) {
-                    newset3.add(this.set[i]);
-                }
+    public int indexOf(final int item) {
+        for (int i = 0; i < size; i++) {
+            if (set[i] == item) {
+                return i;
             }
         }
-        return newset3;
+        return -1;
     }
-    /**
-     * Function to find the cartesian product.
-     *
-     * @param      newset2  A set is passed to find cartesian product.
-     *
-     * @return     return type is a 2-D array.
-     */
-    public int[][] cartesianProduct(final Set newset2) {
-        int rows = this.size() * newset2.size();
-        int[][] a = new int[rows][2];
-        for (int i = 0; i < size(); i++) {
-            int k = 0;
-            for (int j = 0; j < rows; j++) {
-                a[j][0] = this.set[i];
-                a[j][1] = newset2.set[k];
-                k++;
-                if (k == newset2.size()) {
-                    k = 0;
-                    i++;
-                }
-            }
-        }
-        return a;
-    }
-
 }
