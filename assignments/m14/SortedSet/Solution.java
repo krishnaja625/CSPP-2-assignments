@@ -19,10 +19,10 @@ class SortedSet extends Set {
             System.out.println("Invalid Arguments to Subset Exception");
             return null;
         }
-        int count=0;
+        int count = 0;
         for (int i = 0,j=0; i < size; i++) {
             if (set[i] >= fromElement && set[i] < toElement) {
-                subset[j++]=set[i];
+                subset[j++] = set[i];
                 count++;
             }
         }
@@ -35,12 +35,12 @@ class SortedSet extends Set {
      *
      * @return     return type is integer array.
      */
-    public int[] headSet(int toElement) {
+    public int[] headSet(final int toElement) {
         int[] array = new int[10];
         int count = 0;
-        for (int i = 0,j=0; i < size; i++) {
+        for (int i = 0,j = 0; i < size; i++) {
             if (set[i] < toElement) {
-                array[j++]=set[i];
+                array[j++] = set[i];
                 count++;
             }
         }
@@ -61,10 +61,10 @@ class SortedSet extends Set {
     /**
      * function to add all the elements in an array.
      *
-     * @param      ar    The archive
+     * @param      array    The archive
      */
-    public void addAll(int[] ar) {
-        for (int i : ar) {
+    public void addAll(final int[] array) {
+        for (int i : array) {
             add(i);
         }
     }
@@ -106,6 +106,9 @@ class SortedSet extends Set {
             set[index] = element;
     }
 }
+/**
+ * Class named solution to created.
+ */
 public final class Solution {
     /**
      * Constructs the object.
@@ -177,11 +180,13 @@ public final class Solution {
                     int[] tmp = s.subSet(Integer.parseInt(arrstring3[0]),
                         Integer.parseInt(arrstring3[1]));
                     if (tmp != null) {
-                        System.out.println(Arrays.toString(tmp).replace("[", "{").replace("]", "}"));
+                        System.out.println(Arrays.toString(tmp).replace(
+                            "[", "{").replace("]", "}"));
                     }
                 break;
                 case "headSet":
-                    System.out.println(Arrays.toString(s.headSet(Integer.parseInt(tokens[1]))).replace("[","{").replace("]","}"));
+                    System.out.println(Arrays.toString(s.headSet(Integer.parseInt(
+                        tokens[1]))).replace("[", "{").replace("]", "}"));
                 break;
                 case "last":
                 System.out.println(s.last());
