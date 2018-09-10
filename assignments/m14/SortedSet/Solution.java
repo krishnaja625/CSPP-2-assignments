@@ -5,6 +5,14 @@ class SortedSet extends Set {
     public SortedSet() {
         
     }
+    /**
+     * function to give subset.
+     *
+     * @param      fromElement  The from element
+     * @param      toElement    To element
+     *
+     * @return     return type is integer array.
+     */
     public int[] subSet(int fromElement, int toElement) {
         int[] subset = new int[30];
         if (fromElement > toElement) {
@@ -20,6 +28,13 @@ class SortedSet extends Set {
         }
         return Arrays.copyOf(subset, count);
     }
+    /**
+     * function to give the headset.
+     *
+     * @param      toElement  To element
+     *
+     * @return     return type is integer array.
+     */
     public int[] headSet(int toElement) {
         int[] array = new int[10];
         int count = 0;
@@ -31,6 +46,11 @@ class SortedSet extends Set {
         }
         return Arrays.copyOf(array, count);
     }
+    /**
+     * function to get the last element in the array.
+     *
+     * @return     return type is integer.
+     */
     public int last() {
         if (size != 0) {
             return set[size - 1];   
@@ -38,13 +58,23 @@ class SortedSet extends Set {
         System.out.println("Set Empty Exception");
         return -1;
     }
+    /**
+     * function to add all the elements in an array.
+     *
+     * @param      ar    The archive
+     */
     public void addAll(int[] ar) {
         for (int i : ar) {
             add(i);
         }
     }
     @Override
-    public void add(int element) {
+    /**
+     * function to add the elements.
+     *
+     * @param      element  The element
+     */
+    public void add(final int element) {
         if (size == set.length) {
             resize();
         }
@@ -53,7 +83,12 @@ class SortedSet extends Set {
             size++;
         }
     }
-    public void insert(int element) {
+    /**
+     * function to insert an element.
+     *
+     * @param      element  The element
+     */
+    public void insert(final int element) {
             int index = 0;
             int i;
             for (i = 0; i < size; i++) {
@@ -139,10 +174,10 @@ public final class Solution {
                         break;
                     }
                     String[] arrstring3 = tokens[1].split(",");
-                    int[] tmp =s.subSet(Integer.parseInt(arrstring3[0]),
+                    int[] tmp = s.subSet(Integer.parseInt(arrstring3[0]),
                         Integer.parseInt(arrstring3[1]));
                     if (tmp != null) {
-                        System.out.println(Arrays.toString(tmp).replace("[","{").replace("]","}"));
+                        System.out.println(Arrays.toString(tmp).replace("[", "{").replace("]", "}"));
                     }
                 break;
                 case "headSet":
