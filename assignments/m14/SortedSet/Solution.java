@@ -14,13 +14,13 @@ class SortedSet extends Set {
      * @return     return type is integer array.
      */
     public int[] subSet(int fromElement, int toElement) {
-        int[] subset = new int[30];
+        int[] subset = new int[size()];
         if (fromElement > toElement) {
             System.out.println("Invalid Arguments to Subset Exception");
             return null;
         }
         int count = 0;
-        for (int i = 0,j=0; i < size; i++) {
+        for (int i = 0, j = 0; i < size; i++) {
             if (set[i] >= fromElement && set[i] < toElement) {
                 subset[j++] = set[i];
                 count++;
@@ -36,9 +36,9 @@ class SortedSet extends Set {
      * @return     return type is integer array.
      */
     public int[] headSet(final int toElement) {
-        int[] array = new int[10];
+        int[] array = new int[size()];
         int count = 0;
-        for (int i = 0,j = 0; i < size; i++) {
+        for (int i = 0, j = 0; i < size; i++) {
             if (set[i] < toElement) {
                 array[j++] = set[i];
                 count++;
@@ -53,7 +53,7 @@ class SortedSet extends Set {
      */
     public int last() {
         if (size != 0) {
-            return set[size - 1];   
+            return set[size - 1];
         }
         System.out.println("Set Empty Exception");
         return -1;
@@ -185,7 +185,8 @@ public final class Solution {
                     }
                 break;
                 case "headSet":
-                    System.out.println(Arrays.toString(s.headSet(Integer.parseInt(
+                    System.out.println(Arrays.toString(
+                        s.headSet(Integer.parseInt(
                         tokens[1]))).replace("[", "{").replace("]", "}"));
                 break;
                 case "last":
