@@ -1,7 +1,22 @@
+/**
+ * to import scanner class.
+ */
 import java.util.Scanner;
+/**
+ * to import BufferedInputStream.
+ */
 import java.io.BufferedInputStream;
+/**
+ * to import Arrays.
+ */
 import java.util.Arrays;
+/**
+ * Class for sorted set.
+ */
 class SortedSet extends Set {
+    /**
+     * Constructs the object.
+     */
     public SortedSet() {
         
     }
