@@ -17,8 +17,7 @@ class SortedSet extends Set {
     /**
      * Constructs the object.
      */
-    public SortedSet() {
-        
+    SortedSet() {
     }
     /**
      * function to give subset.
@@ -28,7 +27,7 @@ class SortedSet extends Set {
      *
      * @return     return type is integer array.
      */
-    public int[] subSet(int fromElement, int toElement) {
+    public int[] subSet(final int fromElement, final int toElement) {
         int[] subset = new int[size()];
         if (fromElement > toElement) {
             System.out.println("Invalid Arguments to Subset Exception");
