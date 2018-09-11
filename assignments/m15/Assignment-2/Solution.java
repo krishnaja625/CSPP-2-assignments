@@ -193,24 +193,48 @@ public final class Solution {
             String[] tokens = line.split(" ");
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
-                case "size":
+
+            case "size":
                 System.out.println(s.size());
                 break;
-                // case "contains":
-                // System.out.println(s.contains(Integer.parseInt(tokens[1])));
-                // break;
-                case "print":
+            case "contains":
+                System.out.println(s.contains(Integer.parseInt(tokens[1])));
+                break;
+            case "print":
                 System.out.println(s);
                 break;
-                case "addAll":
-                if (tokens.length == 2) {
-                        String[] t1 = tokens[1].split(",");
-                        int[] temp = new int[t1.length];
-                        for (int i = 0; i < temp.length; i++) {
-                            temp[i] = Integer.parseInt(t1[i]);
-                        }
-                        s.addAll(temp);
-                    }
+            case "addAll":
+                int[] intArray = intArray(tokens[1]);
+                if (intArray.length == 1) {
+                    s.add(intArray[0]);
+                } else {
+                    s.add(intArray);
+                }
+                break;
+            case "intersection":
+                s = new SortedSet();
+                Set t = new Set();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
+                System.out.println(s.intersection(t));
+                break;
+            case "retainAll":
+                s = new SortedSet();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                System.out.println(s.retainAll(intArray));
+                break;
+            case "cartesianProduct":
+                s = new SortedSet();
+                t = new Set();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
+                System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
                 break;
                 case "subSet":
                 try {
@@ -254,7 +278,7 @@ public final class Solution {
                 }
                 break;
                 case "add":
-                    String[] t = tokens[1].split(",");
+                    String[] t1 = tokens[1].split(",");
                     s.add(Integer.parseInt(tokens[1]));
                 break;
                 default:
