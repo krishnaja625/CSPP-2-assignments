@@ -11,6 +11,20 @@ import java.util.Scanner;
  */
 import java.util.Arrays;
 /**
+ * Exception for signaling invalid position errors.
+ */
+class InvalidPositionException extends Exception {
+
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
+    public String toString() {
+        return "Invalid Position Exception";
+    }
+}
+/**
  * Class named list is created.
  */
 class List {
@@ -65,13 +79,13 @@ class List {
     }
 
     /**
-     * Function to remove item at index.
-     * @throws     Exception
-     * @param      index  The index
+     * remove element.
+     *
+     * @param      index                     The index
+     *
+     * @throws     InvalidPositionException  invalid index.
      */
-    public void remove(final int index) throws Exception {
-        // write the logic for remove here. Think about what to do to the size
-        // variable.
+    public void remove(final int index) throws InvalidPositionException {
         if (index >= 0 && index < size()) {
 
             for (int i = index; i < size - 1; i++) {
@@ -80,7 +94,7 @@ class List {
             list[size - 1] = 0;
             size--;
         } else {
-            throw new Exception();
+            throw new InvalidPositionException();
         }
     }
 
@@ -179,14 +193,17 @@ class List {
         }
      }
     /**
-     * Function to print the sublist.
+     *subList.
      *
-     * @param      start  The start
-     * @param      end    The end
-     * @return     return type is list.
-     * @throws     Exception
+     * @param      start                      The start
+     * @param      end                        The end
+     *
+     * @return     subList.
+     *
+     * @throws     IndexOutOfBoundsException  exception for not ranged inputs
      */
-    public List subList(final int start, final int end) throws Exception {
+    public List subList(final int start, final int end)
+    throws IndexOutOfBoundsException {
         if (start <= size && end <= size
             && start != end && start >= 0 && end >= 0 && start < end) {
             List newlist = new List();
@@ -195,7 +212,7 @@ class List {
             }
             return newlist;
         } else {
-            throw new Exception();
+            throw new IndexOutOfBoundsException();
         }
     }
     /**
@@ -293,7 +310,7 @@ public class Solution {
                     try {
                         l.remove(Integer.parseInt(tokens[1]));
                     } catch (Exception e) {
-                        System.out.println("Invalid Position Exception");
+                        System.out.println(e);
                     }
 
                 }
@@ -347,7 +364,7 @@ public class Solution {
                         if (object != null) {
                             System.out.println(object);
                         }
-                    } catch (Exception e) {
+                    } catch (IndexOutOfBoundsException e) {
                         System.out.println("Index Out of Bounds Exception");
                     }
                     break;
