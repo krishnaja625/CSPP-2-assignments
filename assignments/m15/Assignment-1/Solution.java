@@ -66,11 +66,10 @@ class List {
      *
      * @param      index  The index
      */
-    public void remove(final int index) {
+    public void remove(final int index) throws Exception {
         // write the logic for remove here. Think about what to do to the size
         // variable.
-        /*if (index >= 0 && index < size())*/ 
-        try {
+        if (index >= 0 && index < size()) {
 
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
@@ -78,8 +77,8 @@ class List {
             list[size - 1] = 0;
             size--;
         }
-        catch(Exception e) {
-            System.out.println("Invalid Position Exception");
+        else {
+            throw new Exception();
         }
     }
 
@@ -167,8 +166,11 @@ class List {
         for (int j = 0; j < newArray.length; j++) {
             for (int i = 0; i < size; i++) {
                 if (list[i] == newArray[j]) {
-                    remove(i);
-                   
+                    try {
+                        remove(i);    
+                    } catch(Exception e) {
+
+                    }
                 }
             }
         }
@@ -182,7 +184,8 @@ class List {
      *
      * @return     return type is list.
      */
-    public List subList(final int start, final int end)  {            
+    public List subList(final int start, final int end)  {     
+
             try {
                 List newlist = new List();
                 for (int i = start; i < end; i++) {
@@ -252,9 +255,14 @@ public class Solution {
                     System.out.println(l);
                 break;
                 case "remove":
-                    if (tokens.length == 2) {
+                if (tokens.length == 2) {
+                    try {
                         l.remove(Integer.parseInt(tokens[1]));
+                    } catch (Exception e) {
+                        System.out.println("Invalid Position Exception");
                     }
+
+                }
                 break;
                 case "indexOf":
                     if (tokens.length == 2) {
