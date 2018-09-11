@@ -185,7 +185,8 @@ class List {
      * @return     return type is list.
      */
     public List subList(final int start, final int end) throws Exception {  
-        if (start <= size && end <= size && start != end && start >= 0 && end >= 0 && start < end) {
+        if (start <= size && end <= size
+            && start != end && start >= 0 && end >= 0 && start < end) {
             List newlist = new List();
                 for (int i = start; i < end; i++) {
                     newlist.add(list[i]);
@@ -193,20 +194,7 @@ class List {
             return newlist;
         } else {
             throw new Exception();
-        }   
-/*        return null;*/
-
-/*            try {
-                List newlist = new List();
-                for (int i = start; i < end; i++) {
-                    newlist.add(list[i]);
-                }
-                System.arraycopy(list, start, newlist, 0, y);
-                return newlist;
-            } catch(Exception e) {
-                    System.out.println("Index Out of Bounds Exception");
-                    return null;
-        }*/
+        }
     }
     /**
      * Function to check whether elements are equal or not.
@@ -228,17 +216,33 @@ class List {
         }
         removeAll(arr);
     }
-    public int count(int item) {
+    /**
+     * function to count the number of times an element is present.
+     *
+     * @param      item  The item
+     *
+     * @return     return type is integer.
+     */
+    public int count(final int item) {
         int count = 0;
         for (int i = 0; i < size(); i++) {
-            if (list[i] == item){
+            if (list[i] == item) {
                 count++;
             }
         }
         return count;
     }
 }
+/**
+ * Class for solution.
+ */
 public class Solution {
+    /**
+     * Constructs the object.
+     */
+    Solution() {
+
+    }
     /**
      * Main function to do the process.
      *
@@ -271,7 +275,8 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t = tokens[1].split(",");
                         if (t.length == 1) {
-                            System.out.println(l.count(Integer.parseInt(tokens[1])));
+                            System.out.println(l.count
+                                (Integer.parseInt(tokens[1])));
                         }
                     }
                 break;
@@ -340,7 +345,7 @@ public class Solution {
                         if (object != null) {
                             System.out.println(object);
                         }
-                    } catch(Exception e) {
+                    } catch (Exception e) {
                         System.out.println("Index Out of Bounds Exception");
                     }
                     break;
