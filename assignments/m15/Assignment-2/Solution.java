@@ -88,16 +88,15 @@ class SortedSet extends Set {
         return array1;
     }
     /**
-     * function to get the last element in the array.
-     *
-     * @return     return type is integer.
+     * last method.
+     * @return     { description_of_the_return_value }
+     * @throws     SetEmptyException  { exception_description }
      */
-    public int last() {
-        if (size != 0) {
-            return set[size - 1];
+    public int last() throws SetEmptyException {
+        if (size == 0) {
+            throw new SetEmptyException("Set Empty Exception");
         }
-        System.out.println("Set Empty Exception");
-        return -1;
+        return set[size - 1];
     }
     /**
      * function to add all the elements in an array.
@@ -243,8 +242,16 @@ public final class Solution {
                     System.out.println(e.getMessage());
                 }
                 break;
-                case "last":
-                System.out.println(s.last());
+            case "last":
+                try {
+                    if (tokens.length != 1) {
+                        break;
+                    }
+                    int temp = s.last();
+                    System.out.println(temp);
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
                 break;
                 case "add":
                     String[] t = tokens[1].split(",");
