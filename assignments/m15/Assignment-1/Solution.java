@@ -271,7 +271,7 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t = tokens[1].split(",");
                         if (t.length == 1) {
-                            l.count(Integer.parseInt(tokens[1]));
+                            System.out.println(l.count(Integer.parseInt(tokens[1])));
                         }
                     }
                 break;
