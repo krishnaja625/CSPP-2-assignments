@@ -174,7 +174,6 @@ class List {
                 }
             }
         }
-
      }
     /**
      * Function to print the sublist.
@@ -189,13 +188,12 @@ class List {
             List newlist = new List();
                 for (int i = start; i < end; i++) {
                     newlist.add(list[i]);
-    /*            System.arraycopy(list, start, newlist, 0, y);*/
-                return newlist;
             }
+            return newlist;
         } else {
             throw new Exception();
         }   
-        return null;
+/*        return null;*/
 
 /*            try {
                 List newlist = new List();
