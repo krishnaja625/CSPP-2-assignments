@@ -164,10 +164,11 @@ class List {
      public void removeAll(final int[] newArray) {
         // write the logic
         for (int j = 0; j < newArray.length; j++) {
-            for (int i = 0; i < size; i++) {
+            for (int i = 0; i < size - 1; i++) {
                 if (list[i] == newArray[j]) {
                     try {
-                        remove(i);   
+                        remove(i);
+                        j--; 
                     } catch(Exception e) {
 
                     }
