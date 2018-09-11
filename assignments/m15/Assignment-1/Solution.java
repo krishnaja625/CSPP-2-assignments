@@ -45,6 +45,9 @@ class List {
             list[size++] = item;
         }
     }
+    /**
+     * function to resize.
+     */
     private void resize() {
         int[] newlist = new int[2 * list.length];
         System.arraycopy(list, 0, newlist, 0, list.length);
@@ -63,7 +66,7 @@ class List {
 
     /**
      * Function to remove item at index.
-     *
+     * @throws
      * @param      index  The index
      */
     public void remove(final int index) throws Exception {
@@ -76,8 +79,7 @@ class List {
             }
             list[size - 1] = 0;
             size--;
-        }
-        else {
+        } else {
             throw new Exception();
         }
     }
@@ -168,8 +170,8 @@ class List {
                 if (list[i] == newArray[j]) {
                     try {
                         remove(i);
-                        i--;   
-                    } catch(Exception e) {
+                        i--;
+                    } catch (Exception e) {
 
                     }
                 }
@@ -181,10 +183,11 @@ class List {
      *
      * @param      start  The start
      * @param      end    The end
-     *
+     * @throws
      * @return     return type is list.
      */
-    public List subList(final int start, final int end) throws Exception {  
+    
+    public List subList(final int start, final int end) throws Exception {
         if (start <= size && end <= size
             && start != end && start >= 0 && end >= 0 && start < end) {
             List newlist = new List();
