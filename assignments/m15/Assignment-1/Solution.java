@@ -66,7 +66,7 @@ class List {
 
     /**
      * Function to remove item at index.
-     * @throws
+     * @throws     Exception
      * @param      index  The index
      */
     public void remove(final int index) throws Exception {
@@ -183,7 +183,7 @@ class List {
      *
      * @param      start  The start
      * @param      end    The end
-     * @throws
+     * @throws     Exception
      * @return     return type is list.
      */
     public List subList(final int start, final int end) throws Exception {
