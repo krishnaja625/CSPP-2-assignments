@@ -184,19 +184,30 @@ class List {
      *
      * @return     return type is list.
      */
-    public List subList(final int start, final int end)  {     
+    public List subList(final int start, final int end) throws Exception {  
+        if (start <= size && end <= size && start != end && start >= 0 && end >= 0 && start < end) {
+            List newlist = new List();
+                for (int i = start; i < end; i++) {
+                    newlist.add(list[i]);
+    /*            System.arraycopy(list, start, newlist, 0, y);*/
+                return newlist;
+            }
+        } else {
+            throw new Exception();
+        }   
+        return null;
 
-            try {
+/*            try {
                 List newlist = new List();
                 for (int i = start; i < end; i++) {
                     newlist.add(list[i]);
                 }
-    /*            System.arraycopy(list, start, newlist, 0, y);*/
+                System.arraycopy(list, start, newlist, 0, y);
                 return newlist;
             } catch(Exception e) {
                     System.out.println("Index Out of Bounds Exception");
                     return null;
-        }
+        }*/
     }
     /**
      * Function to check whether elements are equal or not.
@@ -303,14 +314,18 @@ public class Solution {
                     }
                 break;
                 case "subList":
-                    if (tokens.length != 2) {
-                        break;
-                    }
-                    String[] arrstring3 = tokens[1].split(",");
-                    List object = l.subList(Integer.parseInt(arrstring3[0]),
-                            Integer.parseInt(arrstring3[1]));
-                    if (object != null) {
-                        System.out.println(object);
+                    try {
+                        if (tokens.length != 2) {
+                            break;
+                        }
+                        String[] arrstring3 = tokens[1].split(",");
+                        List object = l.subList(Integer.parseInt(arrstring3[0]),
+                                Integer.parseInt(arrstring3[1]));
+                        if (object != null) {
+                            System.out.println(object);
+                        }
+                    } catch(Exception e) {
+                        System.out.println("Index Out of Bounds Exception");
                     }
                     break;
                 case "equals":
