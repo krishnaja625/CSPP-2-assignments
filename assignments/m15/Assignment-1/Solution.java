@@ -186,7 +186,6 @@ class List {
      * @throws
      * @return     return type is list.
      */
-    
     public List subList(final int start, final int end) throws Exception {
         if (start <= size && end <= size
             && start != end && start >= 0 && end >= 0 && start < end) {
@@ -243,7 +242,7 @@ public class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    protected Solution() {
 
     }
     /**
@@ -278,8 +277,8 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t = tokens[1].split(",");
                         if (t.length == 1) {
-                            System.out.println(l.count
-                                (Integer.parseInt(tokens[1])));
+                            System.out.println(l.count(
+                                Integer.parseInt(tokens[1])));
                         }
                     }
                 break;
