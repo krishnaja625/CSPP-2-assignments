@@ -183,8 +183,8 @@ class List {
      *
      * @param      start  The start
      * @param      end    The end
-     * @throws     Exception
      * @return     return type is list.
+     * @throws     Exception
      */
     public List subList(final int start, final int end) throws Exception {
         if (start <= size && end <= size
