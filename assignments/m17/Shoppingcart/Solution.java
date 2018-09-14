@@ -93,7 +93,7 @@ class ShoppingCart {
         }
 
     }
-    public void showCart(Item item) {
+    public void showCart() {
         for (int i = 0; i < cartcount; i++) {
             System.out.println(cart[i].getcartdetails());
         }
@@ -193,6 +193,7 @@ public final class Solution {
                 scart.addToCart(new Item(data2[0], Integer.parseInt(data2[1])));
                 break;
                 case "show":
+                scart.showCart();
                 break;
                 case "totalAmount":
                 System.out.println("totalAmount:" + scart.getTotalAmount());
