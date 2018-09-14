@@ -176,21 +176,21 @@ public final class Solution {
         Scanner scan = new Scanner(System.in);
         while (scan.hasNext()) {
             String[] token = scan.nextLine().split(" ");
-            String[] data = token[1].split(",");
             switch (token[0]) {
                 case "Item":
+                String[] data = token[1].split(",");
                 scart.addToCatalog(new Item(data[0], Integer.parseInt(data[1]), Double.parseDouble(data[2])));
                 break;
                 case "catalog":
                 scart.catalog();
                 break;
                 case "add":
-                /*String[] data = token[1].split(",");*/
-                scart.addToCart(new Item(data[0], Integer.parseInt(data[1])));
+                String[] data1 = token[1].split(",");
+                scart.addToCart(new Item(data1[0], Integer.parseInt(data1[1])));
                 break;
                 case "remove":
-                /*String[] data = token[1].split(",");*/
-                scart.addToCart(new Item(data[0], Integer.parseInt(data[1])));
+                String[] data2 = token[1].split(",");
+                scart.addToCart(new Item(data2[0], Integer.parseInt(data2[1])));
                 break;
                 case "show":
                 break;
