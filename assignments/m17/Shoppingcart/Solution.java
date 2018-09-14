@@ -123,7 +123,7 @@ class ShoppingCart {
 
         if (coupon.equals("IND50") || coupon.equals("IND10") || coupon.equals("IND20") || coupon.equals("IND30")){
             this.disc = Double.parseDouble(coupon.substring(3, coupon.length()));
-            System.out.println(disc);
+            System.out.println("sdfghjsedrftgybhnuedrcfvtgybhunjiwed4rftgyhuj"+disc);
     } else {
         System.out.println("Invalid coupon");
     }
