@@ -123,6 +123,7 @@ class ShoppingCart {
 
         if (coupon.equals("IND50") || coupon.equals("IND10") || coupon.equals("IND20") || coupon.equals("IND30")){
             this.disc = Double.parseDouble(coupon.substring(3, coupon.length()));
+            System.out.println(disc);
     } else {
         System.out.println("Invalid coupon");
     }
@@ -204,6 +205,7 @@ public final class Solution {
                 case "print":
                 scart.printInvoice();
                 case "coupon":
+                // String[] data3=token
                 scart.applyCoupon(token[1]);
                 break;
                 default:
