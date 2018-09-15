@@ -64,9 +64,14 @@ public final class Solution {
         // add the question objects to the quiz class
         int k = 0;
         Quiz[] questionObject = new Quiz[questionCount];
+            String[] data = new String[10];
+        	String[] choices = new String[10];
+        
+
+
         for (int i = 0; i < questionCount; i++) {
-        	String[] data = s.nextLine().split(":");
-        	String[] choices = data[1].split(",");
+        	data = s.nextLine().split(":");
+        	choices = data[1].split(",");
         	/*quiz = new Quiz(data[0], Integer.parseInt(data[2]), Integer.parseInt(data[3]),
                     Integer.parseInt(data[4]), questionCount);
         	questionObject[i] = quiz;*/
@@ -77,6 +82,7 @@ public final class Solution {
         		break;
         	}
         }*/
+    }
         if (data.length != 5) {
         	System.out.println("Error! Malformed question");
 
@@ -90,7 +96,6 @@ public final class Solution {
     	System.out.println(questionCount + " are added to the quiz");
     	
     }
-}
     }
 
     /**
