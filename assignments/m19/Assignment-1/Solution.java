@@ -71,8 +71,8 @@ public final class Solution {
                     Integer.parseInt(data[4]), questionCount);
         	questionObject[i] = quiz;*/
 
-        for (int j = 0; j <= data.length; j++) {
-        	if (data[j].equals("")) {
+        for (int j = 0; j < data.length; j++) {
+        	if (data[j].equals(null)) {
         		
         		k = 1;
         		break;
