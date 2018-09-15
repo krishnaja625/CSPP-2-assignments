@@ -63,6 +63,8 @@ public final class Solution {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         int k = 0;
+        final int z = 4;
+        final int y = 3;
         Quiz[] questionObject = new Quiz[questionCount];
             String[] data = new String[10];
         	String[] choices = new String[10];
@@ -97,17 +99,14 @@ public final class Solution {
 
         } else if (questionCount == 0){
         	System.out.println("Quiz does not have questions");
-        }
-        else if (Integer.parseInt(data[3]) < 0) {
+        } else if (Integer.parseInt(data[y]) < 0) {
         	System.out.println("Invalid max marks for " + data[0]);
-        } else if (Integer.parseInt(data[4]) > 0) {
+        } else if (Integer.parseInt(data[z]) > 0) {
         	System.out.println("Invalid penalty for " + data[0]);
         } else if (choices.length < 2) {
         	System.out.println(data[0] +" does not have enough answer choices");
-        }
-    else {
+        } else {
     	System.out.println(questionCount + " are added to the quiz");
-    	
     }
     }
 
@@ -118,14 +117,15 @@ public final class Solution {
      * @param      quiz         The quiz object
      * @param      answerCount  The answer count
      */
-    public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
+    public static void startQuiz(final Scanner s,
+     final Quiz quiz, final int answerCount) {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
     }
 
     /**
-     * Displays the score report
+     * Displays the score report.
      *
      * @param      quiz     The quiz object
      */
@@ -148,23 +148,23 @@ question text 4
 Total Score: 10*/
     }
 }
+/**
+ * Class for quiz.
+ */
 class Quiz {
-        	private int correctChoice;
+        	/*private int correctChoice;
         	private int marksAwarded;
         	private int penalty;
         	private String questionText;
-        	private int questionCount;
+        	private int questionCount;*/
     /**
      * Constructs the object.
-     *
-     * @param      movieName        The movie name
-     * @param      showDateandTime  The show dateand time
-     * @param      seats            The seats
      */
     Quiz() {
 
     }
-/*    public Quiz(String questionText, int corectChoice, int marksAwarded, int penalty, int questionCount) {
+/*    public Quiz(String questionText, 
+int corectChoice, int marksAwarded, int penalty, int questionCount) {
         this.corectChoice = corectChoice;
         this.marksAwarded = marksAwarded;
         this.penalty = penalty;
