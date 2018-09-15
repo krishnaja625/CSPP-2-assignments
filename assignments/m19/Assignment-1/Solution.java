@@ -74,7 +74,8 @@ public final class Solution {
         for (int i = 0; i < questionCount; i++) {
             data = s.nextLine().split(":");
             choices = data[1].split(",");
-            /*quiz = new Quiz(data[0], Integer.parseInt(data[2]), Integer.parseInt(data[3]),
+            /*quiz = new Quiz(data[0],
+            Integer.parseInt(data[2]), Integer.parseInt(data[3]),
                     Integer.parseInt(data[4]), questionCount);
             questionObject[i] = quiz;*/
 
@@ -102,8 +103,8 @@ public final class Solution {
         } else if (Integer.parseInt(data[z]) > 0) {
             System.out.println("Invalid penalty for " + data[0]);
         } else if (choices.length < 2) {
-            System.out.println(data[0] +
-                " does not have enough answer choices");
+            System.out.println(data[0]
+                + " does not have enough answer choices");
         } else {
         System.out.println(questionCount + " are added to the quiz");
     }
