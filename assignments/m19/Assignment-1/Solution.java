@@ -66,12 +66,14 @@ public final class Solution {
         Quiz[] questionObject = new Quiz[questionCount];
             String[] data = new String[10];
         	String[] choices = new String[10];
+        	String[] c = new String[10];
         
 
 
         for (int i = 0; i < questionCount; i++) {
         	data = s.nextLine().split(":");
         	choices = data[1].split(",");
+        	
         	/*quiz = new Quiz(data[0], Integer.parseInt(data[2]), Integer.parseInt(data[3]),
                     Integer.parseInt(data[4]), questionCount);
         	questionObject[i] = quiz;*/
@@ -82,6 +84,13 @@ public final class Solution {
         		break;
         	}
         }
+ /*               for (int j = 0; j < data.length; j++) {
+                	c = choices[i].split(" ");
+        	if (Integer.parseInt(c[1]).equals(data[2])) {
+        		k = 1;
+        		break;
+        	}
+        }*/
     }
         if (k == 1) {
         	System.out.println("Error! Malformed question");
@@ -89,8 +98,12 @@ public final class Solution {
         } else if (questionCount == 0){
         	System.out.println("Quiz does not have questions");
         }
-        else if (Integer.parseInt(data[3]) < 0 || Integer.parseInt(data[4]) > 0) {
+        else if (Integer.parseInt(data[3]) < 0) {
+        	System.out.println("Invalid max marks for " + data[0]);
+        } else if (Integer.parseInt(data[4]) > 0) {
         	System.out.println("Invalid penalty for " + data[0]);
+        } else if (choices.length < 2) {
+        	System.out.println(data[0] +" does not have enough answer choices");
         }
     else {
     	System.out.println(questionCount + " are added to the quiz");
