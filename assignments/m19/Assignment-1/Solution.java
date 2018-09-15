@@ -76,14 +76,14 @@ public final class Solution {
                     Integer.parseInt(data[4]), questionCount);
         	questionObject[i] = quiz;*/
 
-/*        for (int j = 0; j < data.length; j++) {
+        for (int j = 0; j < data.length; j++) {
         	if (data[j].equals("")) {
         		k = 1;
         		break;
         	}
-        }*/
+        }
     }
-        if (data.length != 5) {
+        if (k == 1) {
         	System.out.println("Error! Malformed question");
 
         } else if (questionCount == 0){
