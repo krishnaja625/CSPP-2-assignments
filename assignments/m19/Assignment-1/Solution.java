@@ -65,9 +65,7 @@ public final class Solution {
         if (questionCount == 0){
         	System.out.println("Quiz does not have questions");
         }
-        else {
-        	System.out.println(questionCount + " are added to the quiz");
-        }
+        int k = 0;
         Quiz[] questionObject = new Quiz[questionCount];
         for (int i = 0; i < questionCount; i++) {
         	String[] data = s.nextLine().split(":");
@@ -78,11 +76,18 @@ public final class Solution {
 
         for (int j = 0; j < data.length; j++) {
         	if (data[j].equals("")) {
-        		System.out.println("Error! Malformed question");
+        		
+        		k = 1;
         		break;
         	}
         }
     }
+    if (k == 1){
+    	System.out.println("Error! Malformed question");
+        	
+        } else {
+        	System.out.println(questionCount + " are added to the quiz");
+        }
     }
 
     /**
