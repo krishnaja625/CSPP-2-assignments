@@ -105,8 +105,10 @@ public final class Solution {
         } else if (choices.length < 2) {
             System.out.println(data[0]
                 + " does not have enough answer choices");
-        } else if (Integer.parseInt(data[2]) < 0 || Integer.parseInt(data[2]) > choices.length) {
-            System.out.println("Error! Correct answer choice number is out of range for " + data[0]);
+        } else if (Integer.parseInt(data[2])
+            < 0 || Integer.parseInt(data[2]) > choices.length) {
+            System.out.println(
+                "Error! Correct answer choice number is out of range for " + data[0]);
         } else {
         System.out.println(questionCount + " are added to the quiz");
     }
