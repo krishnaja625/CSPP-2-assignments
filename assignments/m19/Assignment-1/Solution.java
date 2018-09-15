@@ -82,11 +82,13 @@ public final class Solution {
         	}
         }
     }
-    if (k == 1){
-    	System.out.println("Error! Malformed question");
+    if (k != 1){
+    	System.out.println(questionCount + " are added to the quiz");
+    	
         	
         } else {
-        	System.out.println(questionCount + " are added to the quiz");
+        	System.out.println("Error! Malformed question");
+        	
         }
     }
 
