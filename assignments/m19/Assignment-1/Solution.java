@@ -70,7 +70,7 @@ public final class Solution {
                     Integer.parseInt(data[4]), questionCount);
         	questionObject[i] = quiz;*/
         if (questionCount == 0){
-        	System.out.println("Quiz does not have any questions");
+        	System.out.println("Quiz does not have questions");
         } else {
         	System.out.println(questionCount + " are added to the quiz");
         }
