@@ -85,7 +85,7 @@ public final class Solution {
                 break;
             }
         }
- /*               for (int j = 0; j < data.length; j++) {
+/*                for (int j = 0; j < choices.length; j++) {
                     c = choices[i].split(" ");
             if (Integer.parseInt(c[1]).equals(data[2])) {
                 k = 1;
@@ -105,6 +105,8 @@ public final class Solution {
         } else if (choices.length < 2) {
             System.out.println(data[0]
                 + " does not have enough answer choices");
+        } else if (Integer.parseInt(data[2]) < 0 || Integer.parseInt(data[2]) > choices.length) {
+            System.out.println("Error! Correct answer choice number is out of range for " + data[0]);
         } else {
         System.out.println(questionCount + " are added to the quiz");
     }
