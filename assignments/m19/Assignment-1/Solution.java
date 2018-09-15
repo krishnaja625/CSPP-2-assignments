@@ -58,55 +58,54 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
+    public static void loadQuestions(final Scanner s,
+     final Quiz quiz, final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         int k = 0;
         final int z = 4;
         final int y = 3;
+        final int w = 10;
         Quiz[] questionObject = new Quiz[questionCount];
-            String[] data = new String[10];
-        	String[] choices = new String[10];
-        	String[] c = new String[10];
-        
-
-
+            String[] data = new String[w];
+            String[] choices = new String[w];
+            String[] c = new String[w];
         for (int i = 0; i < questionCount; i++) {
-        	data = s.nextLine().split(":");
-        	choices = data[1].split(",");
-        	
-        	/*quiz = new Quiz(data[0], Integer.parseInt(data[2]), Integer.parseInt(data[3]),
+            data = s.nextLine().split(":");
+            choices = data[1].split(",");
+            /*quiz = new Quiz(data[0], Integer.parseInt(data[2]), Integer.parseInt(data[3]),
                     Integer.parseInt(data[4]), questionCount);
-        	questionObject[i] = quiz;*/
+            questionObject[i] = quiz;*/
 
         for (int j = 0; j < data.length; j++) {
-        	if (data[j].equals("")) {
-        		k = 1;
-        		break;
-        	}
+            if (data[j].equals("")) {
+                k = 1;
+                break;
+            }
         }
  /*               for (int j = 0; j < data.length; j++) {
-                	c = choices[i].split(" ");
-        	if (Integer.parseInt(c[1]).equals(data[2])) {
-        		k = 1;
-        		break;
-        	}
+                    c = choices[i].split(" ");
+            if (Integer.parseInt(c[1]).equals(data[2])) {
+                k = 1;
+                break;
+            }
         }*/
     }
         if (k == 1) {
-        	System.out.println("Error! Malformed question");
+            System.out.println("Error! Malformed question");
 
-        } else if (questionCount == 0){
-        	System.out.println("Quiz does not have questions");
+        } else if (questionCount == 0) {
+            System.out.println("Quiz does not have questions");
         } else if (Integer.parseInt(data[y]) < 0) {
-        	System.out.println("Invalid max marks for " + data[0]);
+            System.out.println("Invalid max marks for " + data[0]);
         } else if (Integer.parseInt(data[z]) > 0) {
-        	System.out.println("Invalid penalty for " + data[0]);
+            System.out.println("Invalid penalty for " + data[0]);
         } else if (choices.length < 2) {
-        	System.out.println(data[0] +" does not have enough answer choices");
+            System.out.println(data[0] +
+                " does not have enough answer choices");
         } else {
-    	System.out.println(questionCount + " are added to the quiz");
+        System.out.println(questionCount + " are added to the quiz");
     }
     }
 
@@ -132,11 +131,10 @@ public final class Solution {
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
 /*        for(int i =0; i < quiz.questionCount(); i++) {
-        	System.out.println(quiz.questionObject[i].questionText());
+            System.out.println(quiz.questionObject[i].questionText());
 
 
         }*/
-        
 /*        question text 1
  Correct Answer! - Marks Awarded: 1
 question text 2
@@ -152,18 +150,18 @@ Total Score: 10*/
  * Class for quiz.
  */
 class Quiz {
-        	/*private int correctChoice;
-        	private int marksAwarded;
-        	private int penalty;
-        	private String questionText;
-        	private int questionCount;*/
+            /*private int correctChoice;
+            private int marksAwarded;
+            private int penalty;
+            private String questionText;
+            private int questionCount;*/
     /**
      * Constructs the object.
      */
     Quiz() {
 
     }
-/*    public Quiz(String questionText, 
+/*    public Quiz(String questionText,
 int corectChoice, int marksAwarded, int penalty, int questionCount) {
         this.corectChoice = corectChoice;
         this.marksAwarded = marksAwarded;
@@ -172,6 +170,6 @@ int corectChoice, int marksAwarded, int penalty, int questionCount) {
         this.questionCount = questionCount;
     }
     public String questionText() {
-    	return questionText;
+        return questionText;
     }*/
 }
