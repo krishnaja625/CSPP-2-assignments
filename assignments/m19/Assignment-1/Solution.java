@@ -69,16 +69,16 @@ public final class Solution {
         	/*quiz = new Quiz(data[0], Integer.parseInt(data[2]), Integer.parseInt(data[3]),
                     Integer.parseInt(data[4]), questionCount);
         	questionObject[i] = quiz;*/
-        for (String item : data) {
-        	if (item == null) {
-        		System.out.println("Error! Malformed question");
-        		break;
-        	}
-        }
         if (questionCount == 0){
         	System.out.println("Quiz does not have questions");
         } else {
         	System.out.println(questionCount + " are added to the quiz");
+        }
+        for (String item : data) {
+        	if (item.equals(null)) {
+        		System.out.println("Error! Malformed question");
+        		break;
+        	}
         }
     }
     }
