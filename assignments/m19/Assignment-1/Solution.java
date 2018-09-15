@@ -71,25 +71,26 @@ public final class Solution {
                     Integer.parseInt(data[4]), questionCount);
         	questionObject[i] = quiz;*/
 
-        for (int j = 0; j < data.length; j++) {
-        	if (data[j].equals(null)) {
-        		
+/*        for (int j = 0; j < data.length; j++) {
+        	if (data[j].equals("")) {
         		k = 1;
         		break;
         	}
-        }
-    }
-            if (questionCount == 0){
+        }*/
+        if (data.length != 5) {
+        	System.out.println("Error! Malformed question");
+
+        } else if (questionCount == 0){
         	System.out.println("Quiz does not have questions");
         }
-    else if (k != 1){
+        else if (Integer.parseInt(data[3]) < 0 || Integer.parseInt(data[4]) > 0) {
+        	System.out.println("Invalid penalty for " + data[0]);
+        }
+    else {
     	System.out.println(questionCount + " are added to the quiz");
     	
-        	
-        } else {
-        	System.out.println("Error! Malformed question");
-        	
-        }
+    }
+}
     }
 
     /**
