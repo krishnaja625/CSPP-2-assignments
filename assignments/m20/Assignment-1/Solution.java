@@ -348,10 +348,7 @@ public final class Solution {
             String[] data = line.split(" ");
             String[] token= data[1].split(" ");
             System.out.println(data[0] + "(" + data[3] + ")");
-            System.out.print(token[0]);
-            for (int j = 0; j <token.length; j++) {
-                System.out.print("     " + token[j]);
-            }
+            System.out.println(token[0] + "    " + token[1] + "    " + token[2] + "    " + token[3]);
             System.out.println();
         }
     }
