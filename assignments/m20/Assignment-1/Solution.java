@@ -192,9 +192,9 @@ class Quiz {
         if (size != 0) {
         for(int i = 0; i < size; i++) {
             s += getQuestion(i).getQuestionText() + "\n";
-            String[] list = getQuestion(i).getResponse().split(" ");
+            String list = getQuestion(i).getResponse();
 
-            if(getQuestion(i).evaluateResponse(list[1])) {
+            if(getQuestion(i).evaluateResponse(list)) {
                 s += " Correct Answer! - Marks Awarded: "+ getQuestion(i).getMaxMarks() + "\n";
                 total += getQuestion(i).getMaxMarks();
             }
