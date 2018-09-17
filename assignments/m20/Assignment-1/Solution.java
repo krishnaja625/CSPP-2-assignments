@@ -152,8 +152,6 @@ class Quiz {
      * { var_description }.
      */
     private int size;
-    private String[] responses;
-    private int sizeres;
     /**
      * Constructs the object.
      */
@@ -190,20 +188,21 @@ class Quiz {
         String s = "";
         int total = 0;
         if (size != 0) {
-        for(int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             s += getQuestion(i).getQuestionText() + "\n";
             String list = getQuestion(i).getResponse();
 
-            if(getQuestion(i).evaluateResponse(list)) {
-                s += " Correct Answer! - Marks Awarded: "+ getQuestion(i).getMaxMarks() + "\n";
+            if (getQuestion(i).evaluateResponse(list)) {
+                s += " Correct Answer! - Marks Awarded: "
+                + getQuestion(i).getMaxMarks() + "\n";
                 total += getQuestion(i).getMaxMarks();
-            }
-            else {
-                s += " Wrong Answer! - Penalty: "+ getQuestion(i).getPenalty() + "\n";
+            } else {
+                s += " Wrong Answer! - Penalty: "
+                + getQuestion(i).getPenalty() + "\n";
                 total += getQuestion(i).getPenalty();
             }
         }
-        s += "Total Score: "+ total;
+        s += "Total Score: " + total;
     }
         return s;
     }
@@ -219,6 +218,9 @@ public final class Solution {
     private Solution() {
         // leave this blank
     }
+    /**
+     * flag variable is declared.
+     */
     private static boolean flag = true;
     /**
      * main function to execute test cases.
@@ -355,7 +357,5 @@ public final class Solution {
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report using quiz object.
         System.out.println(quiz.showReport());
-        
     }
 }
-
