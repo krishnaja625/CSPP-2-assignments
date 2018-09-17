@@ -345,6 +345,14 @@ public final class Solution {
         for (int i = 0; i < q; i++) {
             String line = scan.nextLine();
             quiz.addresponse(line);
+            String[] data = line.split(" ");
+            String[] token= data[1].split(" ");
+            System.out.println(data[0] + "(" + data[3] + ")");
+            for (int j = 0; j <token.length - 1; j++) {
+                System.out.print(token[j] + "     ");
+            }
+            System.out.print(token[token.length - 1]);
+            System.out.println();
         }
     }
     /**
