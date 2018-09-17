@@ -184,6 +184,12 @@ class Quiz {
     public Question getQuestion(final int index) {
         return questions[index];
     }
+    void displayQuiz() {
+/*            String[] token= data[1].split(" ");
+            System.out.println(data[0] + "(" + data[3] + ")");
+            System.out.println(token[0] + "    " + token[1] + "    " + token[2] + "    " + token[3]);
+            System.out.println();*/
+    }
 
     /**
      * Shows the report.
@@ -342,14 +348,12 @@ public final class Solution {
         // store the user respone in the question object
         /*quiz.displayQuiz();*/
 
+        quiz.displayQuiz();
         for (int i = 0; i < q; i++) {
-            String line = scan.nextLine();
-            quiz.addresponse(line);
-            String[] data = line.split(" ");
-            String[] token= data[1].split(" ");
-            System.out.println(data[0] + "(" + data[3] + ")");
-            System.out.println(token[0] + "    " + token[1] + "    " + token[2] + "    " + token[3]);
-            System.out.println();
+            Question que = quiz.getQuestion(i);
+            System.out.println(que);
+            String res = scan.nextLine();
+            que.setResponse(res);
         }
     }
     /**
