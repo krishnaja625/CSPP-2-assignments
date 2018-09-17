@@ -274,13 +274,11 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        int k = 0;
         final int z = 4;
         final int y = 3;
         final int w = 10;
         final int five = 5;
         String[] choices = new String[w];
-        int j = 0;
         String[] data = new String[q];
         if (q < 1) {
             System.out.println("Quiz does not have questions");
@@ -345,8 +343,8 @@ public final class Solution {
         for (int i = 0; i < q; i++) {
             Question ques = quiz.getQuestion(i);
             System.out.println(ques);
-            String res = scan.nextLine();
-            ques.setResponse(res);
+            String line = scan.nextLine();
+            ques.setResponse(line);
         }
     }
     /**
