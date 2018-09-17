@@ -189,7 +189,7 @@ class Quiz {
     public String showReport() {
         String s = "";
         int total = 0;
-        
+        if (size != 0) {
         for(int i = 0; i < size; i++) {
             s += getQuestion(i).getQuestionText() + "\n";
             String[] list = getQuestion(i).getResponse().split(" ");
@@ -204,10 +204,10 @@ class Quiz {
             }
         }
         s += "Total Score: "+ total;
-    
+    }
         return s;
     }
-}
+    }
 
 /**
  * Solution class for code-eval.
@@ -355,5 +355,6 @@ public final class Solution {
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report using quiz object.
         System.out.println(quiz.showReport());
+        
     }
 }
