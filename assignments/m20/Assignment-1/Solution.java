@@ -149,10 +149,16 @@ class Quiz {
      * { var_description }.
      */
     private int size;
+    private String[] responses;
+    private int sizeres;
     /**
      * Constructs the object.
      */
     Quiz() {
+        questions = new Question[onehundred];
+        size = 0;
+        responses = new String[onehundred];
+        sizeres = 0;
 
     }
     /**
@@ -161,7 +167,12 @@ class Quiz {
      * @param      q     The question
      */
     public void addQuestion(final Question q) {
+        questions[size++] = q;
 
+    }
+    void addresponse(String x) {
+
+        responses[sizeres++] = x;
     }
     /**
      * Gets the question.
@@ -171,8 +182,9 @@ class Quiz {
      * @return     The question.
      */
     public Question getQuestion(final int index) {
-        return null;
+        return questions[index];
     }
+
     /**
      * Shows the report.
      *
@@ -180,10 +192,25 @@ class Quiz {
      */
     public String showReport() {
         String s = "";
+        int total = 0;
+        for(int i = 0; i < size; i++) {
+            System.out.println(getQuestion(i).getQuestionText());
+            String[] list = getQuestion(i).getResponse().split(" ");
+
+            if(getQuestion(i).evaluateResponse(list[1])) {
+                System.out.println(" Correct Answer! - Marks Awarded: "+ getQuestion(i).getMaxMarks());
+                total += getQuestion(i).getMaxMarks();
+            }
+            else {
+                System.out.println(" Wrong Answer! - Penalty: "+ getQuestion(i).getPenalty());
+                total += getQuestion(i).getPenalty();
+            }
+        }
+        System.out.println("Total Score: "+ total);
         return s;
     }
+    }
 
-}
 /**
  * Solution class for code-eval.
  */
@@ -248,7 +275,7 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-int k = 0;
+        int k = 0;
         final int z = 4;
         final int y = 3;
         final int w = 10;
@@ -311,6 +338,12 @@ int k = 0;
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
+        /*quiz.displayQuiz();*/
+
+        for (int i = 0; i < q; i++) {
+            String line = scan.nextLine();
+            quiz.addresponse(line);
+        }
     }
     /**
      * Displays the score report.
@@ -319,5 +352,6 @@ int k = 0;
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report using quiz object.
+        quiz.showReport();
     }
 }
