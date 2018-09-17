@@ -193,6 +193,7 @@ class Quiz {
     public String showReport() {
         String s = "";
         int total = 0;
+        if (size != 0) {
         for(int i = 0; i < size; i++) {
             System.out.println(getQuestion(i).getQuestionText());
             String[] list = getQuestion(i).getResponse().split(" ");
@@ -207,6 +208,7 @@ class Quiz {
             }
         }
         System.out.println("Total Score: "+ total);
+    }
         return s;
     }
     }
