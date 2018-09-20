@@ -84,7 +84,7 @@ class Solution {
         int[][] matrix = new int[length][length];
         for (int i = 0; i < length; i++) {
             for (int j = 0; j < length; j++) {
-                matrix[i][j] = Document.compare(Document.DocumentToString(list[i]),Document.DocumentToString(list[j]));
+                matrix[i][j] = d.compare(d.DocumentToString(list[i]),d.DocumentToString(list[j]));
             }
         }
         for (int i = 0; i < length; i++) {
