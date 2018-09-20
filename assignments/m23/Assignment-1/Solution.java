@@ -23,6 +23,9 @@ public class Solution
             }
         }
         int[][] distance = new int[file.length][file.length];
+        if(file.length==0) {
+            System.out.println("empty directory");
+        } else {
         for(int i=0;i<file.length;i++) {
             for(int j=0;j<file.length;j++) {
                 File file1 = new File(folder+"\\"+file[i]);
@@ -31,6 +34,7 @@ public class Solution
                 HashMap<String, Integer> dict2 = getfile(new Scanner(file2));
                 distance[i][j] = similarity(dict1,dict2);
 
+        }
         }
         }
         System.out.println(Arrays.deepToString(distance));
