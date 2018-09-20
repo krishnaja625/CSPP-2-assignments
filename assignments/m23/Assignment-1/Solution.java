@@ -33,6 +33,7 @@ public class Solution
 
         }
         }
+        System.out.println(Arrays.deepToString(distance));
 /*    System.out.println(dict1);
     System.out.println(dict2);*/
     // similarity(dict1, dict2);
