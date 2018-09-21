@@ -7,7 +7,9 @@ public class Solution
     Solution() {
 
     }
-    public static void main(String[] args) throws Exception { 
+    public static void main(String[] args)  { 
+        try{
+
         Scanner scan = new Scanner(System.in);
         String folder = scan.next();
         File directory = new File(folder);
@@ -41,6 +43,10 @@ public class Solution
 /*    System.out.println(dict1);
     System.out.println(dict2);*/
     // similarity(dict1, dict2);
+    }
+    catch(Exception e) {
+        System.out.println("empty directory");
+    }
 }
     static int similarity(HashMap<String, Integer> dict1, HashMap<String, Integer> dict2) {
         double numerator = 0.0;
