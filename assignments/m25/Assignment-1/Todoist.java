@@ -125,6 +125,15 @@ class Todoist {
         }
         return "";
   } 
+    public Task getNextTask(String name) {
+        finalObject();
+        for (int i =0; i <taskObjects.length; i++) {
+        if (name.equals(taskObjects[i].assignedTo()) && taskObjects[i].status().equals("todo") && (!taskObjects[i].urgent().equals("Urgent")) && taskObjects[i].important().equals("Important")) {
+            return taskObjects[i];
+        }
+        }
+        return null;
+    }
       public int totalTime4Completion() {
         finalObject();
         int total = 0;
