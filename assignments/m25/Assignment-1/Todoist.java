@@ -115,14 +115,17 @@ class Task {
 	Task() {
 
 	}
-	Task(String title, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) {
-		try {
-			if (title != "") {
-		this.title = title;
-		}
+	Task(String title, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) throws Exception {
+/*		try {*/
+			if (title == "") {
+				throw  new Exception("Title not provided");
+
+/*		}
 	}  catch(Exception e) {
-			System.out.println("Title not provided");
+			System.out.println("Title not provided");*/
 			/*System.exit();*/
+		} else {
+					this.title = title;
 		}
 		this.assignedTo = assignedTo;
 		try {
