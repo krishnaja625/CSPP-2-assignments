@@ -6,14 +6,12 @@ class Task {
     private boolean urgent;
     private String status;
     Task() {
-
-    }
+     }
     Task(String title, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) throws Exception {
 /*      try {*/
             if (title.equals("")) {
                 throw  new Exception("Title not provided");
-
-/*      }
+ /*      }
     }  catch(Exception e) {
             System.out.println("Title not provided");*/
             /*System.exit();*/
@@ -97,15 +95,13 @@ class Todoist {
     Todoist() {
         taskObjects = new Task[1];
         size = 0;
-
-    }
+     }
     public void addTask(Task t) {
         if (size == taskObjects.length) {
             resize();
             addTask(t);
         } else {
-
-            taskObjects[size++] = t;
+             taskObjects[size++] = t;
         }
     }
     
@@ -132,8 +128,7 @@ class Todoist {
       public int totalTime4Completion() {
         finalObject();
         int total = 0;
-
-        for (int i =0; i <taskObjects.length; i++) { 
+         for (int i =0; i <taskObjects.length; i++) { 
             String z = taskObjects[i].status();
             if (z.equals("todo")) {
             total += taskObjects[i].timeToComplete();
