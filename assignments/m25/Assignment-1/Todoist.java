@@ -142,11 +142,11 @@ class Todoist {
             tasks[count++] = taskObjects[i];
         }
         }
-        Task[] task = new Task[count];
+        Task[] tas = new Task[count];
         for (int i = 0; i < count; i++) {
-            task[i] = tasks[i];
+            tas[i] = tasks[i];
         }
-        return task;
+        return tas;
     }
       public int totalTime4Completion() {
         finalObject();
