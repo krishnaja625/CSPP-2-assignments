@@ -38,16 +38,15 @@ public class TodoistMain {
                     int n = Integer.parseInt(tokens[2]);
                     Task[] tasks = todo.getNextTask(tokens[1], n);
                     System.out.println(Arrays.deepToString(tasks));
-                break;
+                break;*/
                 case "total-time":
                     System.out.println(todo.totalTime4Completion());
-                break;*/
+                break;
                 default:
                 break;
             }
         }
     }
-
     /**
      * method to test add task.
      *
@@ -202,7 +201,7 @@ class Todoist {
     private Task[] taskObjects;
     private int size;
     Todoist() {
-        taskObjects = new Task[30];
+        taskObjects = new Task[1];
         size = 0;
 
     }
@@ -221,11 +220,26 @@ class Todoist {
         System.arraycopy(taskObjects, 0, newset, 0, taskObjects.length);
         taskObjects = newset;
     }
+    public void finalObject() {
+        Task[] newset = new Task[size-1];
+        for(int i = 0; i < size; i++) {
+            newset[i] = taskObjects[i];
+        }
+        taskObjects = newset;
+    }
     public String toString() {
         String str = "";
+        finalObject();
         for (int i =0; i <taskObjects.length; i++) {
             System.out.println(taskObjects[i]);
         }
         return "";
   } 
+      public int totalTime4Completion() {
+        int total = 0;
+        for (int i =0; i <taskObjects.length; i++) {
+            total += taskObjects[i].timeToComplete();
+        }
+        return total;
+      }
 }
