@@ -8,13 +8,16 @@ import java.util.Arrays;
 /**
  * Class for todoist main.
  */
-public class Todoist {
+public class TodoistMain {
 
     /**
      * Starts a test.
      */
+    TodoistMain() {
+
+    }
     public static void startTest() {
-        Todoist todo = new Todoist();
+/*        Todoist todo = new Todoist();*/
         Scanner s = new Scanner(System.in);
         while (s.hasNext()) {
             String[] tokens = s.nextLine().split(",");
@@ -22,7 +25,7 @@ public class Todoist {
                 case "task":
                     testTask(tokens);
                 break;
-                case "add-task":
+/*                case "add-task":
                     testAddTask(todo, tokens);
                 break;
                 case "print-todoist":
@@ -38,7 +41,7 @@ public class Todoist {
                 break;
                 case "total-time":
                     System.out.println(todo.totalTime4Completion());
-                break;
+                break;*/
                 default:
                 break;
             }
@@ -51,13 +54,13 @@ public class Todoist {
      * @param      todo    The todo
      * @param      tokens  The tokens
      */
-    public static void testAddTask(final Todoist todo, final String[] tokens) {
+/*    public static void testAddTask(final Todoist todo, final String[] tokens) {
         try {
             todo.addTask(createTask(tokens));
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-    }
+    }*/
 
     /**
      * method to test the creation of task object.
@@ -103,37 +106,65 @@ public class Todoist {
 }
 
 class Task {
-	private String title;
-	private String assignedTo;
-	private int timeToComplete;
-	private boolean important;
-	private boolean urgent;
-	private String status;
-	Task() {
+    private String title;
+    private String assignedTo;
+    private int timeToComplete;
+    private boolean important;
+    private boolean urgent;
+    private String status;
+    Task() {
 
-	}
-	Task(String title, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) {
-		this.title = title;
-		this.assignedTo = assignedTo;
-		this.timeToComplete = timeToComplete;
-		this.important = important;
-		this.urgent = urgent;
-		this.status = status;
-	}
-	public String toString() {
-		String a = "";
-		String b = "";
-		if (urgent) {
-			a = "Urgent";
-		} else {
-			a = "Not Urgent";
-		}
-		if (important) {
-			b = "Important";
-		} else {
-			b = "Not Important";
-		}
-		String s = title + ", " + assignedTo + ", " + timeToComplete + ", " + b + ", " + a + ", " + status;
+    }
+    Task(String title, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) throws Exception {
+/*      try {*/
+            if (title.equals("")) {
+                throw  new Exception("Title not provided");
+
+/*      }
+    }  catch(Exception e) {
+            System.out.println("Title not provided");*/
+            /*System.exit();*/
+        } else {
+                    this.title = title;
+        }
+        this.assignedTo = assignedTo;
+/*      try {*/
+            if (timeToComplete >= 0) {
+        this.timeToComplete = timeToComplete;
+        }
+        else {
+            throw new Exception("Invalid timeToComplete " + timeToComplete);
+        }
+/*  } catch(Exception e) {
+        System.out.println("Invalid timeToComplete " + timeToComplete);
+    }*/
+        this.important = important;
+        this.urgent = urgent;
+            if (status.equals("done") || status.equals("todo")) {
+            this.status = status;   
+        
+        } else 
+        {
+            throw new Exception("Invalid status " + status);
+        }
+/*  } catch(Exception e) {
+        System.out.println("Invalid status " + status);
+    }*/
+    }
+    public String toString() {
+        String a = "";
+        String b = "";
+        if (urgent) {
+            a = "Urgent";
+        } else {
+            a = "Not Urgent";
+        }
+        if (important) {
+            b = "Important";
+        } else {
+            b = "Not Important";
+        }
+        String s = title + ", " + assignedTo + ", " + timeToComplete + ", " + b + ", " + a + ", " + status;
         return s;
-	}
+    }
 }
