@@ -121,14 +121,14 @@ class Todoist {
         }
         taskObjects = newset;
     }
-    public Task getNextTask(String name) {
+/*    public Task getNextTask(String name) {
         for (int i =0; i <taskObjects.length; i++) {
             if (name.equals(taskObjects[i].assignedTo()) && taskObjects[i].status().equals("todo") && (!taskObjects[i].urgent().equals("Urgent")) && taskObjects[i].important().equals("Important")) {
                 return taskObjects[i];
             }
         }
         return null;
-    }
+    }*/
     public String toString() {
         String str = "";
         finalObject();
