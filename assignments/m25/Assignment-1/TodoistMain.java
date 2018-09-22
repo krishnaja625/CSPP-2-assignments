@@ -12,9 +12,9 @@ final class TodoistMain {
 /**
  * Constructs the object.
  */
-/*    TodoistMain() {
+    public TodoistMain() {
 
-    }*/
+    }
     /**
      * Starts a test.
      */
