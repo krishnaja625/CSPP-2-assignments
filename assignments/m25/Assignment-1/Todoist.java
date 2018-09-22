@@ -139,8 +139,7 @@ class Todoist {
         int count=0;
         for (int i =0; i <taskObjects.length; i++) {
         if (name.equals(taskObjects[i].assignedTo()) && taskObjects[i].status().equals("todo") && (!taskObjects[i].urgent().equals("Urgent")) && taskObjects[i].important().equals("Important")) {
-            tasks[count] = taskObjects[i];
-            count++;
+            tasks[count++] = taskObjects[i];
         }
         }
         Task[] task = new Task[count];
