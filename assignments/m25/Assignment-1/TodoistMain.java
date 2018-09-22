@@ -36,11 +36,11 @@ public class TodoistMain {
                 case "get-next":
                     System.out.println(todo.getNextTask(tokens[1]));
                 break;
-                /*case "get-next-n":
+                case "get-next-n":
                     int n = Integer.parseInt(tokens[2]);
                     Task[] tasks = todo.getNextTask(tokens[1], n);
                     System.out.println(Arrays.deepToString(tasks));
-                break;*/
+                break;
                 case "total-time":
                     System.out.println(todo.totalTime4Completion());
                 break;
