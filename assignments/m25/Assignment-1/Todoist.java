@@ -14,7 +14,7 @@ public class Todoist {
      * Starts a test.
      */
     Todoist() {
-    	
+
     }
     public static void startTest() {
         Todoist todo = new Todoist();
@@ -116,12 +116,31 @@ class Task {
 
 	}
 	Task(String title, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) {
+		try {
+			if (title != "") {
 		this.title = title;
+		}
+	}  catch(Exception e) {
+			System.out.println("Title not provided");
+			/*System.exit();*/
+		}
 		this.assignedTo = assignedTo;
+		try {
+			if (timeToComplete >= 0) {
 		this.timeToComplete = timeToComplete;
+		}
+	} catch(Exception e) {
+		System.out.println("Invalid timeToComplete " + timeToComplete);
+	}
 		this.important = important;
 		this.urgent = urgent;
+		try {
+			if (status == "done" || status == "todo") {
 		this.status = status;
+		}
+	} catch(Exception e) {
+		System.out.println("Invalid status " + status);
+	}
 	}
 	public String toString() {
 		String a = "";
