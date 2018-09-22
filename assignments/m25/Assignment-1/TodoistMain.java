@@ -1,5 +1,5 @@
 import java.util.Scanner;
-/*import java.util.Arrays;*/
+import java.util.Arrays;
 
 /**
   * write your code below this comment
@@ -9,9 +9,7 @@ import java.util.Scanner;
  * Class for todoist main.
  */
 public class TodoistMain {
-/**
- * Constructs the object.
- */
+
     TodoistMain() {
 
     }
@@ -35,8 +33,8 @@ public class TodoistMain {
                 break;
 /*                case "get-next":
                     System.out.println(todo.getNextTask(tokens[1]));
-                break;*/
-/*                case "get-next-n":
+                break;
+                case "get-next-n":
                     int n = Integer.parseInt(tokens[2]);
                     Task[] tasks = todo.getNextTask(tokens[1], n);
                     System.out.println(Arrays.deepToString(tasks));
