@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.Arrays;
+/*import java.util.Arrays;*/
 
 /**
   * write your code below this comment
@@ -9,13 +9,15 @@ import java.util.Arrays;
  * Class for todoist main.
  */
 public class TodoistMain {
-
-    /**
-     * Starts a test.
-     */
+/**
+ * Constructs the object.
+ */
     TodoistMain() {
 
     }
+    /**
+     * Starts a test.
+     */
     public static void startTest() {
         Todoist todo = new Todoist();
         Scanner s = new Scanner(System.in);
@@ -31,10 +33,10 @@ public class TodoistMain {
                 case "print-todoist":
                     System.out.println(todo);
                 break;
-/*                case "get-next":
+                case "get-next":
                     System.out.println(todo.getNextTask(tokens[1]));
                 break;
-                case "get-next-n":
+/*                case "get-next-n":
                     int n = Integer.parseInt(tokens[2]);
                     Task[] tasks = todo.getNextTask(tokens[1], n);
                     System.out.println(Arrays.deepToString(tasks));
@@ -84,12 +86,16 @@ public class TodoistMain {
      * @throws     Exception  if task inputs are invalid
      */
     public static Task createTask(final String[] tokens) throws Exception {
+        final int o = 3;
+        final int oo = 4;
+        final int ooo = 5;
+        final int oooo = 6;
         String title = tokens[1];
         String assignedTo = tokens[2];
-        int timeToComplete = Integer.parseInt(tokens[3]);
-        boolean important = tokens[4].equals("y");
-        boolean urgent = tokens[5].equals("y");
-        String status = tokens[6];
+        int timeToComplete = Integer.parseInt(tokens[0]);
+        boolean important = tokens[oo].equals("y");
+        boolean urgent = tokens[ooo].equals("y");
+        String status = tokens[oooo];
         return new Task(
             title, assignedTo, timeToComplete, important, urgent, status);
     }
