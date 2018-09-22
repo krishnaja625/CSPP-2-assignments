@@ -128,13 +128,16 @@ class Task {
 					this.title = title;
 		}
 		this.assignedTo = assignedTo;
-		try {
+/*		try {*/
 			if (timeToComplete >= 0) {
 		this.timeToComplete = timeToComplete;
 		}
-	} catch(Exception e) {
+		else {
+			throw new Exception("Invalid timeToComplete " + timeToComplete);
+		}
+/*	} catch(Exception e) {
 		System.out.println("Invalid timeToComplete " + timeToComplete);
-	}
+	}*/
 		this.important = important;
 		this.urgent = urgent;
 /*		try {*/
