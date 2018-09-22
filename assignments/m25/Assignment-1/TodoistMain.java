@@ -238,8 +238,12 @@ class Todoist {
       public int totalTime4Completion() {
         finalObject();
         int total = 0;
-        for (int i =0; i <taskObjects.length; i++) {
+
+        for (int i =0; i <taskObjects.length; i++) { 
+            String z = taskObjects[i].status();
+            if (z.equals("todo")) {
             total += taskObjects[i].timeToComplete();
+        }
         }
         return total;
       }
