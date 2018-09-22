@@ -9,7 +9,6 @@ public class Solution
     }
     public static void main(String[] args)  { 
         try{
-
         Scanner scan = new Scanner(System.in);
         String folder = scan.next();
         File directory = new File(folder);
@@ -35,9 +34,14 @@ public class Solution
                 HashMap<String, Integer> dict1 = getfile(new Scanner(file1));
                 HashMap<String, Integer> dict2 = getfile(new Scanner(file2));
                 distance[i][j] = similarity(dict1,dict2);
-
         }
         }
+        }
+                for (int i = 0; i < file.length; i++) {
+            for (int j = 0; j < file.length; j++) {
+                System.out.print(distance[i][j] + " ");
+            }
+            System.out.println();
         }
         System.out.println(Arrays.deepToString(distance));
 /*    System.out.println(dict1);
