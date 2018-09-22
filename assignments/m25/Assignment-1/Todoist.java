@@ -138,12 +138,13 @@ class Task {
 		this.important = important;
 		this.urgent = urgent;
 /*		try {*/
-			if (status != "done" && status != "todo") {
-				throw new Exception("Invalid status " + status);
+			if (status.equals("done") || status.equals("todo")) {
+			this.status = status;	
 		
 		} else 
 		{
-			this.status = status;
+			throw new Exception("Invalid status " + status);
+
 		}
 /*	} catch(Exception e) {
 		System.out.println("Invalid status " + status);
