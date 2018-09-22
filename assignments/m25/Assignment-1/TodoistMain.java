@@ -223,7 +223,7 @@ class Todoist {
     }
     public String toString() {
         String str = "";
-        for (int i =0; i <taskObjects.length; i++) {
+        for (int i =0; i <taskObjects.length -1; i++) {
             /*System.out.print(taskObjects[i]);*/
             str = taskObjects[i].toString() + "\n";
         }
