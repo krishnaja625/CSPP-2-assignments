@@ -221,7 +221,7 @@ class Todoist {
         taskObjects = newset;
     }
     public void finalObject() {
-        Task[] newset = new Task[size-1];
+        Task[] newset = new Task[size];
         for(int i = 0; i < size; i++) {
             newset[i] = taskObjects[i];
         }
