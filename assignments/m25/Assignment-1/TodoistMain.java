@@ -236,6 +236,7 @@ class Todoist {
         return "";
   } 
       public int totalTime4Completion() {
+        finalObject();
         int total = 0;
         for (int i =0; i <taskObjects.length; i++) {
             total += taskObjects[i].timeToComplete();
