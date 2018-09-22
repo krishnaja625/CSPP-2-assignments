@@ -202,7 +202,7 @@ class Todoist {
     private Task[] taskObjects;
     private int size;
     Todoist() {
-        taskObjects = new Task[10];
+        taskObjects = new Task[30];
         size = 0;
 
     }
