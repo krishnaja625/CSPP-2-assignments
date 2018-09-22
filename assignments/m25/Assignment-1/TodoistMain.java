@@ -8,7 +8,7 @@ import java.util.Arrays;
 /**
  * Class for todoist main.
  */
-public class TodoistMain {
+class TodoistMain {
 /**
  * Constructs the object.
  */
