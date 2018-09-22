@@ -137,13 +137,17 @@ class Task {
 	}
 		this.important = important;
 		this.urgent = urgent;
-		try {
-			if (status == "done" || status == "todo") {
-		this.status = status;
+/*		try {*/
+			if (status != "done" && status != "todo") {
+				throw new Exception("Invalid status " + status);
+		
+		} else 
+		{
+			this.status = status;
 		}
-	} catch(Exception e) {
+/*	} catch(Exception e) {
 		System.out.println("Invalid status " + status);
-	}
+	}*/
 	}
 	public String toString() {
 		String a = "";
