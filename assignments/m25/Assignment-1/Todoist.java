@@ -117,7 +117,7 @@ class Task {
 	}
 	Task(String title, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) throws Exception {
 /*		try {*/
-			if (title == "") {
+			if (title == null) {
 				throw  new Exception("Title not provided");
 
 /*		}
@@ -140,14 +140,12 @@ class Task {
 	}*/
 		this.important = important;
 		this.urgent = urgent;
-/*		try {*/
 			if (status.equals("done") || status.equals("todo")) {
 			this.status = status;	
 		
 		} else 
 		{
 			throw new Exception("Invalid status " + status);
-
 		}
 /*	} catch(Exception e) {
 		System.out.println("Invalid status " + status);
