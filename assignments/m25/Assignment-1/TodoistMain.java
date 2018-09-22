@@ -160,11 +160,23 @@ class Task {
     public int timeToComplete() {
         return timeToComplete;
     } 
-    public boolean important() {
-        return important;
+    public String important() {
+        String b = "";
+        if (important) {
+            b = "Important";
+        } else {
+            b = "Not Important";
+        }
+        return b;
     }
-    public boolean urgent() {
-        return urgent;
+    public String urgent() {
+        String a = "";
+        if (urgent) {
+            a = "Urgent";
+        } else {
+            a = "Not Urgent";
+        }
+        return a;
     }
     public String status() {
         return status;
